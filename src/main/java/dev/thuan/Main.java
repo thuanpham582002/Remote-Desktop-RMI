@@ -21,7 +21,7 @@ public class Main {
 
     public static void main(String[] args) {
         Commons.init();
-        if (!analyseCMDArgs(args)) ;
+//        if (!analyseCMDArgs(args)) ;
         Settings.loadConfig();
         Settings.applyConfig(true);
     }

@@ -9,10 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d910609a-5962-4883-ba5f-1ceb2bfbd1b0" name="Changes" comment="init project">
+    <list default="true" id="d910609a-5962-4883-ba5f-1ceb2bfbd1b0" name="Changes" comment="fake AboutJPanel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/AboutJPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/AboutJPanel.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/AboutJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/AboutJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/SettingsJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/SettingsJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/RMIServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/RMIServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/ConfigJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/ConfigJPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,7 @@
       <workItem from="1699328030823" duration="1420000" />
       <workItem from="1699349329080" duration="600000" />
       <workItem from="1699407841855" duration="1093000" />
-      <workItem from="1699408946627" duration="1366000" />
+      <workItem from="1699408946627" duration="3942000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -110,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699412400878</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fake AboutJPanel">
+      <option name="closed" value="true" />
+      <created>1699412848735</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699412848735</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init project" />
-    <option name="LAST_COMMIT_MESSAGE" value="init project" />
+    <MESSAGE value="fake AboutJPanel" />
+    <option name="LAST_COMMIT_MESSAGE" value="fake AboutJPanel" />
   </component>
 </project>

@@ -32,6 +32,9 @@ public class ConfigJPanel extends javax.swing.JPanel {
         } else {
             jCheckBoxManualAdrActionPerformed(null);
         }
+        jPanel3.setVisible(false);
+        jLabel6.setVisible(false);
+        jTextFieldHTTPPort.setVisible(false);
     }
 
     /**
