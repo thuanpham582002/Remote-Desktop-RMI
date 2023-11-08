@@ -15,8 +15,6 @@ import dev.thuan.viewer.Recorder;
 
 /**
  * FileTransGui.java
- *
- * @author benbac
  */
 
 public class FileTransGUI extends javax.swing.JFrame {

@@ -19,7 +19,7 @@ import javax.crypto.spec.SecretKeySpec;
 import dev.thuan.Main;
 
 /**
- * @author benbac
+ *
  */
 
 public class PasswordUtility {

@@ -17,8 +17,6 @@ import dev.thuan.utilities.InetAdrUtility;
 
 /**
  * RMIServer.java
- *
- * @author benbac
  */
 
 public class RMIServer {

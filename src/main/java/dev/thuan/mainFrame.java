@@ -9,8 +9,6 @@ import dev.thuan.server.Server;
 
 /**
  * mainFrame.java
- *
- * @author benbac
  */
 public class mainFrame extends javax.swing.JFrame {
 

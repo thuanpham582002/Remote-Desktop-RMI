@@ -11,7 +11,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * @author sky
+
  */
 class SwingLayoutStyle extends LayoutStyle {
     private static final Method SWING_GET_LAYOUT_STYLE_METHOD;

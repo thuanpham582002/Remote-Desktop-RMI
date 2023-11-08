@@ -8,7 +8,7 @@ import dev.thuan.viewer.ConnectionDialog;
 import dev.thuan.viewer.Viewer;
 
 /**
- * @author Admin
+ *
  */
 public class HomeJPanel extends javax.swing.JPanel {
 

@@ -195,7 +195,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *            {@code doInBackground} and {@code get} methods
  * @param <V> the type used for carrying out intermediate results by this
  *            {@code SwingWorker's} {@code publish} and {@code process} methods
- * @author Igor Kushnirskiy
+
  * @version $Revision: 1.6 $ $Date: 2008/07/25 19:32:29 $
  */
 public abstract class SwingWorker<T, V> implements Future<T>, Runnable {

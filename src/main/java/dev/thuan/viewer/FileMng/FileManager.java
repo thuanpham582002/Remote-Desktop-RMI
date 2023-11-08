@@ -11,8 +11,6 @@ import dev.thuan.viewer.Recorder;
 
 /**
  * FileManager.java
- *
- * @author benbac
  */
 
 public class FileManager {

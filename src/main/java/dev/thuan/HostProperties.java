@@ -9,8 +9,6 @@ import dev.thuan.utilities.InetAdrUtility;
 
 /**
  * HostProperties.java
- *
- * @author benbac
  */
 public class HostProperties {
 

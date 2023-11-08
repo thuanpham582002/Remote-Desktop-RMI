@@ -20,8 +20,6 @@ import dev.thuan.viewer.ViewerOptions;
 
 /**
  * robot.java
- *
- * @author benbac
  */
 
 public class robot extends Thread {

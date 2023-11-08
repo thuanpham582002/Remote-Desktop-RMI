@@ -11,8 +11,6 @@ import dev.thuan.utilities.InetAdrUtility;
 
 /**
  * Commons.java
- *
- * @author PPU, benbac
  */
 
 public class Commons {

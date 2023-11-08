@@ -16,8 +16,6 @@ import dev.thuan.utilities.PasswordUtility;
 
 /**
  * RMIClient.java
- *
- * @author benbac
  */
 
 public class RMIClient {

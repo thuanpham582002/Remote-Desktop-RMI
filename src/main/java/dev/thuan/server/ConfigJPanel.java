@@ -15,7 +15,7 @@ import dev.thuan.utilities.FileUtility;
 import dev.thuan.utilities.InetAdrUtility;
 
 /**
- * @author Benbac
+ *
  */
 public class ConfigJPanel extends javax.swing.JPanel {
 

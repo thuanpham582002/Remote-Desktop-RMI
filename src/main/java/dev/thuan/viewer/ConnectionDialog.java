@@ -11,8 +11,6 @@ import dev.thuan.utilities.FileUtility;
 
 /**
  * ConnectionDialog.java
- *
- * @author benbac
  */
 
 public class ConnectionDialog extends javax.swing.JFrame {

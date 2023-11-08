@@ -11,7 +11,7 @@ import dev.thuan.utilities.FileUtility;
 import dev.thuan.utilities.LookAndFeelUtility;
 
 /**
- * @author Benbac
+ *
  */
 public class SettingsJPanel extends javax.swing.JPanel {
 

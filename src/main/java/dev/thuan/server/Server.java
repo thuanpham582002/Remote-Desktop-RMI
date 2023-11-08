@@ -29,8 +29,6 @@ import dev.thuan.viewer.Recorder;
 
 /**
  * Server.java
- *
- * @author benbac
  */
 
 public class Server extends Thread {

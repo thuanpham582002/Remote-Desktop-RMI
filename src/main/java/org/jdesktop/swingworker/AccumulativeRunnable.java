@@ -70,7 +70,7 @@ import java.util.List;
  * </pre>
  *
  * @param <T> the type this {@code Runnable} accumulates
- * @author Igor Kushnirskiy
+
  * @version $Revision: 1.3 $ $Date: 2008/07/25 19:32:29 $
  */
 abstract class AccumulativeRunnable<T> implements Runnable {

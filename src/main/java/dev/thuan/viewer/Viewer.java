@@ -25,8 +25,6 @@ import dev.thuan.viewer.FileMng.FileTransGUI;
 
 /**
  * Viewer.java
- *
- * @author benbac
  */
 
 public class Viewer extends Thread {

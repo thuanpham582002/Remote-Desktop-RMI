@@ -15,8 +15,6 @@ import dev.thuan.viewer.Recorder;
 
 /**
  * FilesDropTargetListener.java
- *
- * @author benbac
  */
 
 public class FilesDropTargetListener implements DropTargetListener {

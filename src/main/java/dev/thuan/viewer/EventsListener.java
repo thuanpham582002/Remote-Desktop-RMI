@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import dev.thuan.viewer.FileMng.FilesDropTargetListener;
 
 /**
- * @author Admin
+ *
  */
 public class EventsListener {
 

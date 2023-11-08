@@ -13,8 +13,6 @@ import dev.thuan.utilities.screenCaptureCompressor.ScreenCapture;
 
 /**
  * ViewerOptions.java
- *
- * @author benbac
  */
 
 public class ViewerOptions {

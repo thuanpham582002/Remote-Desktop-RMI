@@ -17,8 +17,6 @@ import dev.thuan.Commons;
 
 /**
  * ClipbrdUtility.java
- *
- * @author benbac
  */
 
 public class ClipbrdUtility {

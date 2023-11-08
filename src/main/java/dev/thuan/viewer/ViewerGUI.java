@@ -12,8 +12,6 @@ import dev.thuan.Main;
 
 /**
  * ViewerGUI.java
- *
- * @author benbac
  */
 
 public class ViewerGUI extends javax.swing.JFrame {

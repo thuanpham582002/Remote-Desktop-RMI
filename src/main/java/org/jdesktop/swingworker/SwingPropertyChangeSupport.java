@@ -17,7 +17,7 @@ import java.beans.PropertyChangeSupport;
  * {@code SwingPropertyChangeSupport(sourceBean, true)} it ensures
  * listeners are only ever notified on the <i>Event Dispatch Thread</i>.
  *
- * @author Igor Kushnirskiy
+
  * @version $Revision: 1.1 $ $Date: 2005/06/18 21:27:14 $
  */
 

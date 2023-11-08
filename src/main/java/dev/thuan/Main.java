@@ -10,8 +10,6 @@ import dev.thuan.viewer.ConnectionDialog;
 
 /**
  * main.java
- *
- * @author benbac
  */
 
 public class Main {

@@ -17,7 +17,7 @@ import java.util.Map;
  * The information used for this layout style comes from:
  * http://developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/
  *
- * @author Werner Randelshofer
+
  * @version $Revision: 1.3 $
  */
 class AquaLayoutStyle extends LayoutStyle {

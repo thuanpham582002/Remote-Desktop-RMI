@@ -73,9 +73,9 @@ import java.util.*;
  * the <code>setAutocreateContainerGaps()</code> method to insert gaps
  * between the components and the container.
  *
- * @author Tomas Pavek
- * @author Jan Stola
- * @author Scott Violet
+
+
+
  * @version $Revision: 1.25 $
  */
 public class GroupLayout implements LayoutManager2 {

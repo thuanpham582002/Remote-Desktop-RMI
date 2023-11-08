@@ -5,8 +5,6 @@ import java.security.Permission;
 
 /**
  * SecurityMng.java
- *
- * @author benbac
  */
 public class SecurityMng extends SecurityManager {
 

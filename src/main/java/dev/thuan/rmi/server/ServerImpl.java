@@ -16,8 +16,6 @@ import dev.thuan.viewer.Viewer;
 
 /**
  * ServerImpl.java
- *
- * @author benbac
  */
 
 public class ServerImpl extends UnicastRemoteObject implements ServerInterface {

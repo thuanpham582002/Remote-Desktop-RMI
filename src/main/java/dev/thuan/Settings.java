@@ -10,8 +10,6 @@ import dev.thuan.utilities.LookAndFeelUtility;
 
 /**
  * Settings.java
- *
- * @author benbac
  */
 
 public class Settings {

@@ -18,8 +18,6 @@ import dev.thuan.utilities.ImageUtility;
 
 /**
  * ScreenPlayer.java
- *
- * @author benbac
  */
 
 public class ScreenPlayer extends JLabel {

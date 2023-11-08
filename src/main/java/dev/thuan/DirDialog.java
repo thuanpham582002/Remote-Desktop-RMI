@@ -12,7 +12,7 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
 /**
- * @author benbac
+ *
  */
 public class DirDialog extends javax.swing.JDialog {
 

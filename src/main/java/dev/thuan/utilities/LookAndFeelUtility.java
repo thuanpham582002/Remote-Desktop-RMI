@@ -10,8 +10,6 @@ import dev.thuan.mainFrame;
 
 /**
  * 05-06-09 0.3
- *
- * @author benabc
  */
 public class LookAndFeelUtility {
 

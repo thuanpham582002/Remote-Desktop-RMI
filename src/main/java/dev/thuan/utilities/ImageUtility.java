@@ -8,8 +8,6 @@ import javax.imageio.stream.*;
 
 /**
  * ImageUtility.java
- *
- * @author benbac
  */
 
 public class ImageUtility {

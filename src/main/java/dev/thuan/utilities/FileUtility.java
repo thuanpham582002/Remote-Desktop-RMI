@@ -21,8 +21,6 @@ import dev.thuan.Main;
 
 /**
  * FileUtility.java
- *
- * @author benbac
  */
 public class FileUtility {
 

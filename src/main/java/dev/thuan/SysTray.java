@@ -11,8 +11,6 @@ import dev.thuan.viewer.ConnectionDialog;
 
 /**
  * SysTray.java
- *
- * @author benbac
  */
 public class SysTray {
 

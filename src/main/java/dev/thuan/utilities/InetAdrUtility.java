@@ -9,8 +9,6 @@ import java.util.Enumeration;
 
 /**
  * InetAdrUtility.java
- *
- * @author benbac
  */
 
 public class InetAdrUtility {

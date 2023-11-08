@@ -14,7 +14,7 @@ import dev.thuan.rmi.server.RMIServer;
 import dev.thuan.viewer.Viewer;
 
 /**
- * @author Benbac
+ *
  */
 public class ActiveConnectionsJPanel extends javax.swing.JPanel {
 

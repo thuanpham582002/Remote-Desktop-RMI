@@ -10,8 +10,6 @@ import java.util.Hashtable;
 
 /**
  * ServerInterface.java
- *
- * @author benbac
  */
 
 public interface ServerInterface extends Remote {
@@ -21,15 +19,15 @@ public interface ServerInterface extends Remote {
     void setOptionsChanged(int index, boolean bool) throws RemoteException;
 
     int startViewer(InetAddress inetAddress,
-                           String username, String password, boolean isReversedConnection) throws RemoteException;
+                    String username, String password, boolean isReversedConnection) throws RemoteException;
 
     void stopViewer(int index) throws RemoteException;
 
     HashMap<String, byte[]> getChangedScreenBlocks(int index,
-                                                          boolean isEmpty) throws RemoteException;
+                                                   boolean isEmpty) throws RemoteException;
 
     void setChangedScreenBlocks(HashMap<String, byte[]> changedBlocks,
-                                       int index) throws RemoteException;
+                                int index) throws RemoteException;
 
     byte[] getScreenCapture(int index) throws RemoteException;
 

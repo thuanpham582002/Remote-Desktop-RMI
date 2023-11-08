@@ -2,8 +2,6 @@ package dev.thuan;
 
 /**
  * SystemProperties.java
- *
- * @author benbac
  */
 
 public class SystemProperties {

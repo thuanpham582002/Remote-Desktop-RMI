@@ -13,8 +13,6 @@ import dev.thuan.viewer.FileMng.FileManager;
 
 /**
  * Recorder.java
- *
- * @author benbac
  */
 
 public class Recorder extends Thread {

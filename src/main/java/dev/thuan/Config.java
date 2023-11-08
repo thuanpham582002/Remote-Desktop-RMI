@@ -10,8 +10,6 @@ import dev.thuan.utilities.PasswordUtility;
 
 /**
  * Config.java
- *
- * @author benbac
  */
 
 public class Config {

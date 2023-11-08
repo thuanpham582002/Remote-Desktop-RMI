@@ -7,8 +7,6 @@ import dev.thuan.utilities.FileUtility;
 
 /**
  * ConnectionInfos.java
- *
- * @author benbac
  */
 public class ConnectionInfos {
 
