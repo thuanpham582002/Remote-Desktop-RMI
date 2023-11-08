@@ -50,15 +50,15 @@ public class Commons {
 
     public static final String DEFAULT_CONFIG = "<default config>";
     public static String HOME_DIR = "./";
-    public static String CONFIG_FILE = "jrdesktop.conf";
+    public static String CONFIG_FILE = "noRoom2013.conf";
     public static String downloadsLocation = "./";
 
     public static String KEY_STORE = "keystore";
     public static String TRUST_STORE = "truststore";
 
     public static float java_version = 1.5f;
-    public static final String jrdesktop_version = "0.3.1.0";
-    public static String jrdesktop_build_date = "2009-09-16";
+    public static final String noRoom2013_version = "week 2";
+    public static String noRoom2013_build_date = "2009-09-16";
 
     public static final byte RECT_OPTION = 0;
     public static final byte IMAGE_OPTION = 1;
@@ -102,11 +102,11 @@ public class Commons {
         defaultServerAddress = InetAdrUtility.getLocalHost().getHostAddress();
         HOME_DIR = SystemProperties.getHomeDirectory() + File.separatorChar;
         downloadsLocation = HOME_DIR + "Downloads" + File.separatorChar;
-        HOME_DIR += ".jrdesktop" + File.separatorChar;
-        CONFIG_FILE = HOME_DIR + "jrdesktop.conf";
+        HOME_DIR += ".noRoom2013" + File.separatorChar;
+        CONFIG_FILE = HOME_DIR + "noRoom2013.conf";
         TRUST_STORE = HOME_DIR + "truststore";
         KEY_STORE = HOME_DIR + "keystore";
         java_version = SystemProperties.getJavaVersion();
-        jrdesktop_build_date = FileUtility.getBuiltDate();
+        noRoom2013_build_date = FileUtility.getBuiltDate();
     }
 }

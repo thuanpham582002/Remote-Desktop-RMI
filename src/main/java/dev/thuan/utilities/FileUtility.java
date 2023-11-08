@@ -118,10 +118,10 @@ public class FileUtility {
         return fs.toArray(new File[fs.size()]);
     }
 
-    // delect jrdesktop.conf, server*.conf
+    // delect noRoom2013.conf, server*.conf
     //    viewer*.conf, truststore & keystore files
     public static String[] getConfigFiles() {
-        final String jrdesktop_config = new File(Settings.configFile).getName();
+        final String noRoom2013_config = new File(Settings.configFile).getName();
         final String trust_store = new File(Settings.trustStore).getName();
         final String key_stroe = new File(Settings.keyStore).getName();
 
@@ -131,7 +131,7 @@ public class FileUtility {
                 return (name.startsWith("viewer") && name.endsWith(".conf")) ||
                         (name.startsWith("server") && name.endsWith(".conf")) ||
                         name.equals(trust_store) || name.equals(key_stroe) ||
-                        name.equals(jrdesktop_config);
+                        name.equals(noRoom2013_config);
             }
         };
         return new File(Settings.home).list(filenameFilter);
@@ -206,7 +206,7 @@ public class FileUtility {
             return new File(new URL(appName).getFile()).toURI().normalize().toString();
         } catch (Exception e) {
             e.printStackTrace();
-            return "file:./jrdesktop.jar";
+            return "file:./noRoom2013.jar";
         }
     }
 
@@ -216,7 +216,7 @@ public class FileUtility {
                     getJarnameURI(), "UTF-8")).getFile();
         } catch (Exception e) {
             e.printStackTrace();
-            return "./jrdesktop.jar";
+            return "./noRoom2013.jar";
         }
     }
 

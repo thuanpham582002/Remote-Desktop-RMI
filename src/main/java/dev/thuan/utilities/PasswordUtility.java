@@ -79,7 +79,7 @@ public class PasswordUtility {
 
     public static void passwordGenerator() {
         System.out.println("This command takes a string and encodes it" +
-                "for use in jrdesktop config files\n\n" +
+                "for use in noRoom2013 config files\n\n" +
                 "Please enter the password:\n");
         String password;
 

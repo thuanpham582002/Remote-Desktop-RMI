@@ -112,7 +112,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="&quot;dev.thuan &quot; + Commons.jrdesktop_version " type="code"/>
+                  <Connection code="&quot;dev.thuan &quot; + Commons.noRoom2013_version " type="code"/>
                 </Property>
               </Properties>
             </Component>
@@ -120,7 +120,7 @@
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Commons.jrdesktop_build_date" type="code"/>
+                  <Connection code="Commons.noRoom2013_build_date" type="code"/>
                 </Property>
               </Properties>
             </Component>

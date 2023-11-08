@@ -64,7 +64,7 @@ public class RMIClient {
 
            /* rmiServer = (ServerInterface) Naming.lookup(
                     "rmi://" + clientConfig.server_address + ":" +
-                   clientConfig.server_port + "/jrdesktop");*/
+                   clientConfig.server_port + "/noRoom2013");*/
 
             index = rmiServer.startViewer(InetAdrUtility.getLocalHost(),
                     clientConfig.username,

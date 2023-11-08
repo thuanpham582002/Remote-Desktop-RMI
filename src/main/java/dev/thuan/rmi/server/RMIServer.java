@@ -78,7 +78,7 @@ public class RMIServer {
             registry.rebind(Commons.rmiBindingName, serverImpl);
             
           /* Naming.rebind("rmi://" + serverConfig.server_address + ":" +
-                   serverConfig.server_port + "/jrdesktop", (ServerInterface) serverImpl);*/
+                   serverConfig.server_port + "/noRoom2013", (ServerInterface) serverImpl);*/
             // }  catch (ExportException ee) {
             // registry already exists, we'll just use it.
         } catch (Exception e) {

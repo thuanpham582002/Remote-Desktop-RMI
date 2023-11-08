@@ -37,13 +37,13 @@ public class SysTray {
                     else
                         trayIcon.setImage(new ImageIcon(Commons.WAIT_ICON).getImage());
                 }
-                trayIcon.setToolTip("jrdesktop [Server running]\n" +
+                trayIcon.setToolTip("noRoom2013 [Server running]\n" +
                         RMIServer.serverConfig.server_address);
                 break;
             case Commons.SERVER_NOT_RUNNING:
                 serverItem.setLabel("Start");
                 trayIcon.setImage(new ImageIcon(Commons.IDLE_ICON).getImage());
-                trayIcon.setToolTip("jrdesktop [Server stopped]\n" +
+                trayIcon.setToolTip("noRoom2013 [Server stopped]\n" +
                         RMIServer.serverConfig.server_address);
                 break;
             case Commons.SERVER_STARTED:
@@ -51,7 +51,7 @@ public class SysTray {
                 trayIcon.displayMessage("Connection status", "Server Started !!",
                         MessageType.INFO);
                 trayIcon.setImage(new ImageIcon(Commons.WAIT_ICON).getImage());
-                trayIcon.setToolTip("jrdesktop [Server running]\n" +
+                trayIcon.setToolTip("noRoom2013 [Server running]\n" +
                         RMIServer.serverConfig.server_address);
                 break;
             case Commons.CONNECTION_FAILED:
@@ -63,7 +63,7 @@ public class SysTray {
                 trayIcon.displayMessage("Connection status", "Server Stopped !!",
                         MessageType.INFO);
                 trayIcon.setImage(new ImageIcon(Commons.IDLE_ICON).getImage());
-                trayIcon.setToolTip("jrdesktop [Server stopped]\n" +
+                trayIcon.setToolTip("noRoom2013 [Server stopped]\n" +
                         RMIServer.serverConfig.server_address);
                 break;
 
@@ -125,7 +125,7 @@ public class SysTray {
                     }
                 });
 
-                MenuItem item = new MenuItem("Open jrdesktop");
+                MenuItem item = new MenuItem("Open noRoom2013");
                 item.setFont(new Font(null, Font.BOLD, 12));
                 item.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e) {

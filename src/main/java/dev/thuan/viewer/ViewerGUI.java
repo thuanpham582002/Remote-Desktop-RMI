@@ -125,7 +125,7 @@ public class ViewerGUI extends javax.swing.JFrame {
         jPopupMenuHelp.add(jMenuItemHostProps);
 
         jMenuItemAbout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dev/thuan/images/about.png"))); // NOI18N
-        jMenuItemAbout.setText("About jrdesktop");
+        jMenuItemAbout.setText("About noRoom2013");
         jMenuItemAbout.setToolTipText("");
         jMenuItemAbout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,7 +135,7 @@ public class ViewerGUI extends javax.swing.JFrame {
         jPopupMenuHelp.add(jMenuItemAbout);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        setTitle(" jrdesktop Viewer");
+        setTitle(" noRoom2013 Viewer");
         setIconImage(new ImageIcon(Commons.WAIT_ICON).getImage());
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
@@ -418,9 +418,9 @@ public class ViewerGUI extends javax.swing.JFrame {
         if (recorder.isRecording()) {
             setIconImage(new ImageIcon(Commons.ALIVE_ICON).getImage());
             jBtnStartStop.setIcon(new ImageIcon(Commons.STOP_ICON));
-            setTitle("jrdesktop Viewer [" + recorder.config.server_address + "]");
+            setTitle("noRoom2013 Viewer [" + recorder.config.server_address + "]");
         } else {
-            setTitle("jrdesktop Viewer");
+            setTitle("noRoom2013 Viewer");
             setIconImage(new ImageIcon(Commons.WAIT_ICON).getImage());
             jBtnStartStop.setIcon(new ImageIcon(Commons.START_ICON));
             jToggleBtnPauseResume.setSelected(false);

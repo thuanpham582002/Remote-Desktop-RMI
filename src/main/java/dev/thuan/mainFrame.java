@@ -43,7 +43,7 @@ public class mainFrame extends javax.swing.JFrame {
         jTabbedPane = new javax.swing.JTabbedPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        setTitle("Home - jrdesktop " + Commons.jrdesktop_version);
+        setTitle("Home - noRoom2013 " + Commons.noRoom2013_version);
         setIconImage(new ImageIcon(Commons.IDLE_ICON).getImage());
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -111,7 +111,7 @@ public class mainFrame extends javax.swing.JFrame {
         }
 
         frame.setTitle(jTabbedPane.getTitleAt(jTabbedPane.getSelectedIndex()) +
-                " - jrdesktop " + Commons.jrdesktop_version);
+                " - noRoom2013 " + Commons.noRoom2013_version);
     }//GEN-LAST:event_jTabbedPaneStateChanged
 
     /**

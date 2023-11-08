@@ -43,10 +43,10 @@ public class AboutJPanel extends javax.swing.JPanel {
 
         jLabelVersion.setFont(new java.awt.Font("Tahoma", 0, 14));
         jLabelVersion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelVersion.setText("thuan " + Commons.jrdesktop_version);
+        jLabelVersion.setText("thuan " + Commons.noRoom2013_version);
 
         jLabelBuildDate.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelBuildDate.setText(Commons.jrdesktop_build_date);
+        jLabelBuildDate.setText(Commons.noRoom2013_build_date);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 16));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -54,7 +54,7 @@ public class AboutJPanel extends javax.swing.JPanel {
 
         jLabel4.setForeground(java.awt.Color.blue);
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("jrdesktop.net");
+        jLabel4.setText("noRoom2013.net");
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 0, 11));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

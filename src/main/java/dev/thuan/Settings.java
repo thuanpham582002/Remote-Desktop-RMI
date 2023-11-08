@@ -66,7 +66,7 @@ public class Settings {
             properties.put("Downlods-Location", downloadsDir);
 
             properties.store(new FileOutputStream(configFile),
-                    "jrdesktop configuration file");
+                    "noRoom2013 configuration file");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -98,7 +98,7 @@ public class Settings {
         if (home.charAt(home.length() - 1) != File.separatorChar)
             home += File.separatorChar;
         downloadsDir = home + "Downloads" + File.separatorChar;
-        configFile = home + "jrdesktop.conf";
+        configFile = home + "noRoom2013.conf";
         keyStore = home + "keystore";
         trustStore = home + "truststore";
     }

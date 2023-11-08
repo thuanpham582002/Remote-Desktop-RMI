@@ -43,7 +43,7 @@ public class Main {
             for (int i = 0; i < args.length; i++) {
                 arg = args[i];
                 if (arg.startsWith("--home:"))
-                    home = arg.substring(7);  // set jrdesktop's home directory
+                    home = arg.substring(7);  // set noRoom2013's home directory
             }
             Settings.updateFilePaths(home);
             Settings.loadConfig();
@@ -157,12 +157,12 @@ public class Main {
 
     public static void displayHelp(boolean full) {
         System.out.println(
-                "jrdesktop - Java Remote Desktop.\n" +
+                "noRoom2013 - Java Remote Desktop.\n" +
                         "A cross-platform software that provides remote view and control of a computer.\n" +
-                        "http://jrdesktop.net/\n\n");
+                        "http://noRoom2013.net/\n\n");
         if (full)
             System.out.println(
-                    "Usage: java -jar jrdesktop.jar <command> [options]\n\n" +
+                    "Usage: java -jar noRoom2013.jar <command> [options]\n\n" +
 
                             "Commands:\n" +
                             "   server | viewer             start server (or viewer) using default parameters " +
@@ -188,14 +188,14 @@ public class Main {
                             "   --noexit                disable system exit. \n" +
                             "   --pxserver:address      proxy servers address. \n" +
                             "   --pxport:port           proxy servers port. \n" +
-                            "   --home:directory        jrdesktops home directory. \n" +
+                            "   --home:directory        noRoom2013s home directory. \n" +
                             "   --conf:file             load configuration file. \n" +
                             "   --downloads:directory   downloads location. \n" +
                             "   --lookAndFeel:laf       look and feel theme. \n"
             );
         else
             System.out.println(
-                    Commons.jrdesktop_version + " " + Commons.jrdesktop_build_date);
+                    Commons.noRoom2013_version + " " + Commons.noRoom2013_build_date);
         exit();
     }
 
@@ -256,11 +256,11 @@ public class Main {
 
     public static void quit() {
         if (Settings.displayMode != Commons.DISPLAY_MODE_FRAME && !Settings.exitDisabled) {
-            if (JOptionPane.showConfirmDialog(null, "jrdesktop is running as a " +
+            if (JOptionPane.showConfirmDialog(null, "noRoom2013 is running as a " +
                             (Settings.displayMode == Commons.DISPLAY_MODE_APPLET ? "web applet" : "Firefox extension") +
                             ". If you chosse OK, you my lose all opened pages." +
-                            "\nYou may want instead to : \n   * Close jrdesktop using the window's close buttom; " +
-                            "\n   * Disable system exit as settings tab to have a normal shutdown of jrdesktop" +
+                            "\nYou may want instead to : \n   * Close noRoom2013 using the window's close buttom; " +
+                            "\n   * Disable system exit as settings tab to have a normal shutdown of noRoom2013" +
                             "\n\nAre you sure you want to continue ?", "Warning Dialog",
                     JOptionPane.YES_NO_OPTION) == JOptionPane.OK_OPTION)
                 Main.exit();
