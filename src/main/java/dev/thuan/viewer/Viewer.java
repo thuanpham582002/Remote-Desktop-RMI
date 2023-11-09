@@ -104,14 +104,7 @@ public class Viewer extends Thread {
 
     public void setKeyEvents() {
         try {
-            ArrayList<KeyEvent> keyEvents = recorder.eventsListener.getKeyEvents();
-            KeyboardCommand keyboardCommand;
-            ArrayList<String> keyEventsJson = new ArrayList<String>();
-            for (KeyEvent keyEvent : keyEvents) {
-                keyboardCommand = new KeyboardCommand(keyEvent);
-                keyEventsJson.add(GsonUtility.toJson(keyboardCommand));
-            }
-            client.rmiServer.setKeyEvents(keyEventsJson);
+            client.rmiServer.setKeyEvents(recorder.eventsListener.getKeyEvents());
         } catch (RemoteException re) {
             re.printStackTrace();
         }

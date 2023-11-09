@@ -17,6 +17,7 @@ import java.util.HashMap;
 import dev.thuan.Commons;
 import dev.thuan.utilities.GsonUtility;
 import dev.thuan.utilities.ImageUtility;
+import dev.thuan.viewer.KeyEventWrapper;
 import dev.thuan.viewer.KeyboardCommand;
 import dev.thuan.viewer.ViewerOptions;
 
@@ -175,19 +176,23 @@ public class robot extends Thread {
         }
     }
 
-    public void setKeyEvents(ArrayList evts) {
-        for (int i = 0; i < evts.size(); i++)
-//            setKeyEvent((KeyEvent) GsonUtility.fromJson((String) evts.get(i)));
-            ((KeyboardCommand) GsonUtility.fromJson((String) evts.get(i))).doAction(rt);
+    public void setKeyEvents(ArrayList<KeyEventWrapper> evts) {
+        for (KeyEventWrapper keyEventWrapper : evts) {
+            setKeyEvent(keyEventWrapper.toKeyEvent());
+        }
     }
 
     public void setKeyEvent(KeyEvent evt) {
+        int keyCode = evt.getKeyCode();
         switch (evt.getID()) {
             case KeyEvent.KEY_PRESSED:
-                rt.keyPress(evt.getKeyCode());
+                rt.keyPress(keyCode);
                 break;
             case KeyEvent.KEY_RELEASED:
-                rt.keyRelease(evt.getKeyCode());
+                rt.keyRelease(keyCode);
+                break;
+            default:
+                System.out.println("Unknown key event: " + evt);
                 break;
         }
     }

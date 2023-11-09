@@ -3,17 +3,11 @@ package dev.thuan.rmi.server;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
-import javax.rmi.ssl.SslRMIClientSocketFactory;
-import javax.rmi.ssl.SslRMIServerSocketFactory;
 import javax.swing.JOptionPane;
 
 import dev.thuan.Commons;
 import dev.thuan.SystemProperties;
 import dev.thuan.Config;
-import dev.thuan.Settings;
-import dev.thuan.rmi.client.MultihomeRMIClientSocketFactory;
-import dev.thuan.utilities.FileUtility;
-import dev.thuan.utilities.InetAdrUtility;
 
 /**
  * RMIServer.java

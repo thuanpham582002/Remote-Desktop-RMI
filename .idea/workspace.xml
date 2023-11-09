@@ -9,22 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d910609a-5962-4883-ba5f-1ceb2bfbd1b0" name="Changes" comment="remove author">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Remote_Desktop_RMI_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/utilities/GsonUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/CommandBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/KeyboardCommand.java" afterDir="false" />
+    <list default="true" id="d910609a-5962-4883-ba5f-1ceb2bfbd1b0" name="Changes" comment="remove ssl/multihome">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/KeyEventAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/KeyEventWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Remote_Desktop_RMI_jar/Remote-Desktop-RMI.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Remote_Desktop_RMI_jar/Remote-Desktop-RMI.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/Commons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/Commons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/SecurityMng.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/SystemProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/SystemProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/ConfigJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/ConfigJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/client/MultihomeRMIClientSocketFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/RMIServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/RMIServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/robot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/EventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/EventsListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Viewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Viewer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +63,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -119,6 +113,9 @@
       <workItem from="1699429303827" duration="1433000" />
       <workItem from="1699442200263" duration="17243000" />
       <workItem from="1699519143804" duration="739000" />
+      <workItem from="1699521916496" duration="4581000" />
+      <workItem from="1699544189450" duration="5364000" />
+      <workItem from="1699549670937" duration="2753000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -160,18 +157,49 @@
       <option name="project" value="LOCAL" />
       <updated>1699426140384</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="remove ssl/multihome">
+      <option name="closed" value="true" />
+      <created>1699522282271</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699522282271</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init project" />
     <MESSAGE value="fake AboutJPanel" />
     <MESSAGE value="hide some item in colfig and setting" />
     <MESSAGE value="remove author" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove author" />
+    <MESSAGE value="remove ssl/multihome" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove ssl/multihome" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

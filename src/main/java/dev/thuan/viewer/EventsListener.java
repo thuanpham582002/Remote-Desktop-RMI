@@ -32,7 +32,7 @@ public class EventsListener {
     private final FilesDropTargetListener filesDropTargetListener;
     private final DropTarget dropTarget;
 
-    private ArrayList<KeyEvent> keyEvents = new ArrayList<KeyEvent>();
+    private ArrayList<KeyEventWrapper> keyEvents = new ArrayList<KeyEventWrapper>();
     private ArrayList<MouseEvent> mouseEvents = new ArrayList<MouseEvent>();
 
     public EventsListener(Recorder recorder) {
@@ -41,12 +41,12 @@ public class EventsListener {
         keyAdapter = new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
-                keyEvents.add(e);
+                keyEvents.add(new KeyEventWrapper(e));
             }
 
             @Override
             public void keyReleased(KeyEvent e) {
-                keyEvents.add(e);
+                keyEvents.add(new KeyEventWrapper(e));
             }
         };
 
@@ -106,12 +106,12 @@ public class EventsListener {
         return _mouseEvents;
     }
 
-    public ArrayList<KeyEvent> getKeyEvents() {
-        ArrayList<KeyEvent> _keyEvents = new ArrayList<KeyEvent>();
+    public ArrayList<KeyEventWrapper> getKeyEvents() {
+        ArrayList<KeyEventWrapper> _keyEvents = new ArrayList<KeyEventWrapper>();
 
         synchronized (keyEvents) {
             _keyEvents = keyEvents;
-            keyEvents = new ArrayList<KeyEvent>();
+            keyEvents = new ArrayList<KeyEventWrapper>();
         }
 
         return _keyEvents;

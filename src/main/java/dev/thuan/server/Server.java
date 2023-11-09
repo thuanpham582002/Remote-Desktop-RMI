@@ -2,6 +2,7 @@ package dev.thuan.server;
 
 import java.awt.Rectangle;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -20,6 +21,7 @@ import dev.thuan.HostProperties;
 import dev.thuan.Settings;
 import dev.thuan.SysTray;
 import dev.thuan.rmi.client.RMIClient;
+import dev.thuan.utilities.GsonUtility;
 import dev.thuan.viewer.ViewerOptions;
 import dev.thuan.utilities.ClipbrdUtility;
 import dev.thuan.utilities.FileUtility;
