@@ -66,7 +66,7 @@ public class SystemProperties {
         try {
             return Float.parseFloat(
                     System.getProperty("java.version").substring(0, 3));
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             return 1.5f;
         }
     }

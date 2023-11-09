@@ -91,9 +91,6 @@ public class Commons {
     final static public byte DISPLAY_MODE_EXTENSION = 2;
 
     public static void init() {
-        if (System.getSecurityManager() == null)
-            System.setSecurityManager(new SecurityMng());
-
         ImageUtility.init();
 
         SystemProperties.clear();

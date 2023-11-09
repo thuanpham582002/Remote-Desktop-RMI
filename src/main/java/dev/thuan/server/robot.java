@@ -15,7 +15,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import dev.thuan.Commons;
+import dev.thuan.utilities.GsonUtility;
 import dev.thuan.utilities.ImageUtility;
+import dev.thuan.viewer.KeyboardCommand;
 import dev.thuan.viewer.ViewerOptions;
 
 /**
@@ -175,7 +177,8 @@ public class robot extends Thread {
 
     public void setKeyEvents(ArrayList evts) {
         for (int i = 0; i < evts.size(); i++)
-            setKeyEvent((KeyEvent) evts.get(i));
+//            setKeyEvent((KeyEvent) GsonUtility.fromJson((String) evts.get(i)));
+            ((KeyboardCommand) GsonUtility.fromJson((String) evts.get(i))).doAction(rt);
     }
 
     public void setKeyEvent(KeyEvent evt) {

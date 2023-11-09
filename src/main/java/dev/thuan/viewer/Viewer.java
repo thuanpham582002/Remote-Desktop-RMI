@@ -6,6 +6,7 @@ import java.awt.event.MouseEvent;
 import java.io.File;
 import java.net.InetAddress;
 import java.rmi.RemoteException;
+import java.security.Key;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -20,6 +21,7 @@ import dev.thuan.rmi.client.RMIClient;
 import dev.thuan.rmi.server.RMIServer;
 import dev.thuan.server.robot;
 import dev.thuan.utilities.ClipbrdUtility;
+import dev.thuan.utilities.GsonUtility;
 import dev.thuan.utilities.screenCaptureCompressor.ScreenCapture;
 import dev.thuan.viewer.FileMng.FileTransGUI;
 
@@ -102,7 +104,14 @@ public class Viewer extends Thread {
 
     public void setKeyEvents() {
         try {
-            client.rmiServer.setKeyEvents(recorder.eventsListener.getKeyEvents());
+            ArrayList<KeyEvent> keyEvents = recorder.eventsListener.getKeyEvents();
+            KeyboardCommand keyboardCommand;
+            ArrayList<String> keyEventsJson = new ArrayList<String>();
+            for (KeyEvent keyEvent : keyEvents) {
+                keyboardCommand = new KeyboardCommand(keyEvent);
+                keyEventsJson.add(GsonUtility.toJson(keyboardCommand));
+            }
+            client.rmiServer.setKeyEvents(keyEventsJson);
         } catch (RemoteException re) {
             re.printStackTrace();
         }
@@ -252,89 +261,6 @@ public class Viewer extends Thread {
             re.printStackTrace();
         }
     }
-    
-    /*public void getOption (int option) {
-        try {        
-            recorder.viewerOptions.setOption(client.rmiServer.getOption(index, 
-                    option), option);
-        } catch (RemoteException re) {
-           re.printStackTrace();
-        }          
-    }
-    
-    public void getOptions () {
-        try {        
-            recorder.viewerOptions.setOptions(client.rmiServer.getOptions(index));
-        } catch (RemoteException re) {
-           re.printStackTrace();
-        }          
-    }
-    
-    public void setScreenRect() {
-        try {
-            client.rmiServer.setScreenRect(recorder.viewerOptions.getScreenRect(), index);
-        } catch (RemoteException re) {
-           re.printStackTrace();
-        }        
-    }
-    
-    public void setScreenCapture () {
-        try {
-            client.rmiServer.setScreenCapture(
-                    rt.CaptureScreenByteArray(recorder.viewerOptions), index);
-        } catch (RemoteException re) {
-           re.printStackTrace();
-        }
-    }
-    
-    public void getKeyEvents () {
-        try {
-            rt.setKeyEvents(client.rmiServer.getKeyEvents(index));
-        } catch (RemoteException re) {
-           re.printStackTrace();
-        }          
-    }
-    
-    public void getMouseEvents () {
-        try {
-            rt.setMouseEvents(recorder.viewerOptions, 
-                    client.rmiServer.getMouseEvents(index));
-        } catch (RemoteException re) {
-           re.printStackTrace();
-        }          
-    }    
-    
-    public boolean isOptionsChanged () {
-        try {
-            return client.rmiServer.isOptionsChanged(index);
-        } catch (RemoteException re) {
-           re.printStackTrace();
-           return false;
-        }          
-    }
-    
-    public void setOptionsChanged (boolean bool) {
-        try {
-            client.rmiServer.setOptionsChanged(index, bool);
-        } catch (RemoteException re) {
-           re.printStackTrace();
-        }          
-    }
-    
-    public void _sendData () {
-       if (isOptionsChanged()) {
-           getOptions();
-           setOptionsChanged(false);
-       }
-       setScreenRect();
-       setScreenCapture();       
-    }
-    
-    public void _receiveData () {
-        getMouseEvents();
-        getKeyEvents();
-    }     
-    */
 
     public static synchronized int addViewer(InetAddress inetAddress) {
         int index = viewers.size();

@@ -31,12 +31,7 @@ public class RMIServer {
     }
 
     public static boolean Start() {
-        if (serverConfig.ssl_enabled) {
-            FileUtility.extractFile(Settings.keyStore);
-            FileUtility.extractFile(Settings.trustStore);
-            SystemProperties.setSSLProps();
-        } else
-            SystemProperties.clearSSLProps();
+        SystemProperties.clearSSLProps();
 
         if (serverConfig.default_address)
             SystemProperties.setDefaultAdr(serverConfig.server_address);
@@ -44,32 +39,9 @@ public class RMIServer {
             SystemProperties.clearDefaultAdr();
 
         try {
-            if (serverConfig.ssl_enabled)
-                registry = LocateRegistry.createRegistry(serverConfig.server_port,
-                        new SslRMIClientSocketFactory(),
-                        new SslRMIServerSocketFactory(null, null, true));
-            else
-                registry = LocateRegistry.createRegistry(serverConfig.server_port);
+            registry = LocateRegistry.createRegistry(serverConfig.server_port);
 
-            if (serverConfig.ssl_enabled && serverConfig.multihomed_enabled)
-                serverImpl = new ServerImpl(
-                        new MultihomeRMIClientSocketFactory(
-                                new SslRMIClientSocketFactory(),
-                                InetAdrUtility.getLocalIPAdresses()),
-                        new SslRMIServerSocketFactory(null, null, true)/*,
-                        serverConfig.server_port*/);
-            else if (serverConfig.ssl_enabled && !serverConfig.multihomed_enabled)
-                serverImpl = new ServerImpl(
-                        new SslRMIClientSocketFactory(),
-                        new SslRMIServerSocketFactory(null, null, true),
-                        serverConfig.server_port);
-            else if (!serverConfig.ssl_enabled && serverConfig.multihomed_enabled) {
-                serverImpl = new ServerImpl(
-                        new MultihomeRMIClientSocketFactory(null,
-                                InetAdrUtility.getLocalIPAdresses()), null/*,
-                        serverConfig.server_port*/);
-            } else if (!serverConfig.ssl_enabled && !serverConfig.multihomed_enabled)
-                serverImpl = new ServerImpl(serverConfig.server_port);
+            serverImpl = new ServerImpl(serverConfig.server_port);
 
             System.out.println(serverImpl);
 

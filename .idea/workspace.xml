@@ -9,17 +9,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d910609a-5962-4883-ba5f-1ceb2bfbd1b0" name="Changes" comment="fake AboutJPanel">
+    <list default="true" id="d910609a-5962-4883-ba5f-1ceb2bfbd1b0" name="Changes" comment="remove author">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Remote_Desktop_RMI_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/utilities/GsonUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/CommandBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/KeyboardCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Remote_Desktop_RMI_jar/Remote-Desktop-RMI.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Remote_Desktop_RMI_jar/Remote-Desktop-RMI.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/Commons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/Commons.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/SettingsJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/SettingsJPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/RMIServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/RMIServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/SecurityMng.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/SystemProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/SystemProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/ConfigJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/ConfigJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/robot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Viewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Viewer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,24 +54,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/01655/IdeaProjects/RM/Remote-Desktop-RMI/src/main/java/dev/thuan/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/01655/IdeaProjects/RM/Remote-Desktop-RMI/src/main/java/dev/thuan/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\01655\IdeaProjects\RM\Remote-Desktop-RMI\src\main\java\org" />
@@ -95,6 +114,11 @@
       <workItem from="1699349329080" duration="600000" />
       <workItem from="1699407841855" duration="1093000" />
       <workItem from="1699408946627" duration="3942000" />
+      <workItem from="1699425847210" duration="314000" />
+      <workItem from="1699426642658" duration="601000" />
+      <workItem from="1699429303827" duration="1433000" />
+      <workItem from="1699442200263" duration="17243000" />
+      <workItem from="1699519143804" duration="739000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -120,7 +144,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699412848735</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="hide some item in colfig and setting">
+      <option name="closed" value="true" />
+      <created>1699425875352</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699425875352</updated>
+    </task>
+    <task id="LOCAL-00005" summary="remove author">
+      <option name="closed" value="true" />
+      <created>1699426140384</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699426140384</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +169,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init project" />
     <MESSAGE value="fake AboutJPanel" />
-    <option name="LAST_COMMIT_MESSAGE" value="fake AboutJPanel" />
+    <MESSAGE value="hide some item in colfig and setting" />
+    <MESSAGE value="remove author" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove author" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/thuan/mainFrame.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
