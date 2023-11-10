@@ -37,6 +37,9 @@ public class ConfigJPanel extends javax.swing.JPanel {
         jLabel6.setVisible(false);
         jTextFieldHTTPPort.setVisible(false);
         jComboBoxLocalAdrs.setEditable(false);
+        jCheckBoxMultihomedEnabled.setVisible(false);
+        jCheckBoxManualAdr.setVisible(false);
+        jCheckBoxDefaultAdr.setVisible(false);
     }
 
     /**
