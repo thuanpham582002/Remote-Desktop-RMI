@@ -34,6 +34,46 @@ public class ViewerGUI extends javax.swing.JFrame {
         jScrollPane1.setViewportView(recorder.screenPlayer);
         setVisible(true);
         Main.activeConnection++;
+        jPopupMenuFileTranfer.setVisible(false);
+        jMenuItemSendFilesFromClipbrd.setVisible(false);
+        jMenuItemReceiveFilesFromClipbrd.setVisible(false);
+        jPopupMenuHelp.setVisible(false);
+        jMenuItemConnectInfo.setVisible(false);
+        jMenuItemHostProps.setVisible(false);
+        jMenuItemAbout.setVisible(false);
+//        jToolBar1.setVisible(false);
+        jBtnStartStop.setVisible(false);
+        jToggleBtnPauseResume.setVisible(false);
+        jBtnViewCtrl.setVisible(false);
+        jSeparator1.setVisible(false);
+        jBtnFullNormal.setVisible(false);
+        jBtnPartialComplete.setVisible(false);
+        jSeparator9.setVisible(false);
+        jLabel2.setVisible(false);
+        jComboBoxScreenZoom.setVisible(false);
+        jSeparator4 .setVisible(false);
+        jLabel3.setVisible(false);
+        jCheckBoxScreenCompress.setVisible(false);
+        jSeparator15.setVisible(false);
+        jLabel4.setVisible(false);
+        jCheckBoxImageQuality.setVisible(false);
+        jComboBoxImageQuality.setVisible(false);
+        jSeparator11.setVisible(false);
+        jLabel1.setVisible(false);
+        jComboBoxColorQuality.setVisible(false);
+        jSeparator14 .setVisible(false);
+        jLabel6 .setVisible(false);
+        jComboBoxRefreshRate.setVisible(false);
+        jSeparator5.setVisible(false);
+//        jLabel5.setVisible(false);
+//        jCheckBoxClipTrans = new javax.swing.JCheckBox();
+        jSeparator13.setVisible(false);
+        jBtnFileTransfer.setVisible(false);
+        jSeparator6.setVisible(false);
+        jSeparator12.setVisible(false);
+        jBtnClose.setVisible(false);
+        jSeparator10.setVisible(false);
+//        jScrollPane1.setVisible(false);
     }
 
     public void Start() {
