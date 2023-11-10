@@ -73,17 +73,7 @@ public class RMIServer {
         boolean auth = (serverConfig.username.length() != 0) ||
                 (serverConfig.password.length() != 0);
         String status = "Running ..." +
-                "\nat: " + serverConfig.server_address + ":" + serverConfig.server_port
-//                +
-//                "\nauthentication: " + (auth ? "enabled" : "disabled")
-//                +
-//                "\nencryption: " +
-//                (serverConfig.ssl_enabled ? "enabled" : "disabled") +
-//                "\nmultihomed: " +
-//                (serverConfig.multihomed_enabled ? "enabled" : "disabled") +
-//                "\nreverse connection: " +
-//                (serverConfig.reverseConnection ? "enabled" : "disabled")
-                ;
+                "\nat: " + serverConfig.server_address + ":" + serverConfig.server_port;
         return status;
     }
 }

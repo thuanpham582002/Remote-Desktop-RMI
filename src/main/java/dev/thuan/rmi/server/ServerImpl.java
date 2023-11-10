@@ -11,6 +11,7 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.Queue;
 
 import dev.thuan.server.Server;
 import dev.thuan.utilities.GsonUtility;
@@ -69,6 +70,16 @@ public class ServerImpl extends UnicastRemoteObject implements ServerInterface {
             Viewer.removeViewer(index);
         else
             Server.removeViewer(index);
+    }
+
+    @Override
+    public void sendMessage(String message, InetAddress address) throws RemoteException {
+        Server.sendMessage(message, address, true);
+    }
+
+    @Override
+    public Queue<String> receiveMessage(InetAddress address) throws RemoteException {
+        return Server.receiveMessage(address, true);
     }
 
     @Override

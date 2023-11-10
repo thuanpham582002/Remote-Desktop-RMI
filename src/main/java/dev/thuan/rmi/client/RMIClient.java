@@ -51,12 +51,8 @@ public class RMIClient {
         connected = false;
 
         try {
-            if (clientConfig.ssl_enabled)
-                registry = LocateRegistry.getRegistry(clientConfig.server_address,
-                        clientConfig.server_port, new SslRMIClientSocketFactory());
-            else
-                registry = LocateRegistry.getRegistry(clientConfig.server_address,
-                        clientConfig.server_port);
+            registry = LocateRegistry.getRegistry(clientConfig.server_address,
+                    clientConfig.server_port);
 
             rmiServer = (ServerInterface) registry.lookup(Commons.rmiBindingName);
 

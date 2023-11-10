@@ -24,7 +24,7 @@
                   <Component id="jButtonDisconnectAll" max="32767" attributes="1"/>
                   <Component id="jButtonRefresh" max="32767" attributes="1"/>
                   <Component id="jButtonDetails" max="32767" attributes="1"/>
-                  <Component id="jButtonProperties" max="32767" attributes="1"/>
+                  <Component id="jButtonChat" max="32767" attributes="1"/>
                   <Component id="jButtonDisconnect" alignment="0" pref="132" max="32767" attributes="1"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -40,7 +40,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jButtonDisconnect" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButtonProperties" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButtonChat" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jButtonDetails" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -88,15 +88,15 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonDisconnectActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButtonProperties">
+    <Component class="javax.swing.JButton" name="jButtonChat">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/dev.thuan/images/props.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Properties"/>
+        <Property name="text" type="java.lang.String" value="Chat"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonPropertiesActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonChatActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonDetails">

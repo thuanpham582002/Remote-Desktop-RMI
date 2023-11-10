@@ -3,12 +3,17 @@ package dev.thuan.viewer;
 import java.awt.GraphicsDevice;
 import java.awt.event.WindowEvent;
 import java.io.File;
+import java.net.InetAddress;
+import java.util.Hashtable;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
+import dev.thuan.ChatJFrame;
 import dev.thuan.Commons;
 import dev.thuan.HostProperties;
 import dev.thuan.Main;
+import dev.thuan.rmi.server.RMIServer;
+import dev.thuan.server.Server;
 
 /**
  * ViewerGUI.java
@@ -363,7 +368,7 @@ public class ViewerGUI extends javax.swing.JFrame {
         jToolBar1.add(jSeparator6);
 
         jBtnHelp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dev/thuan/images/help.png"))); // NOI18N
-        jBtnHelp.setToolTipText("Help");
+        jBtnHelp.setToolTipText("Chat");
         jBtnHelp.setFocusable(false);
         jBtnHelp.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jBtnHelp.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -568,7 +573,10 @@ public class ViewerGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBoxScreenZoomItemStateChanged
 
     private void jBtnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnHelpActionPerformed
-        jPopupMenuHelp.show(jBtnHelp, 15, 15);
+//        jPopupMenuHelp.show(jBtnHelp, 15, 15);
+        ChatJFrame chatJPanel = new ChatJFrame(recorder);
+        System.out.println("ChatJPanel created");
+        chatJPanel.setVisible(true);
     }//GEN-LAST:event_jBtnHelpActionPerformed
 
     private void jMenuItemConnectInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConnectInfoActionPerformed

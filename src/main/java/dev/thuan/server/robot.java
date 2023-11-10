@@ -18,7 +18,6 @@ import dev.thuan.Commons;
 import dev.thuan.utilities.GsonUtility;
 import dev.thuan.utilities.ImageUtility;
 import dev.thuan.viewer.KeyEventWrapper;
-import dev.thuan.viewer.KeyboardCommand;
 import dev.thuan.viewer.ViewerOptions;
 
 /**

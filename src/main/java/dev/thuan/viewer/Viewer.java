@@ -7,10 +7,7 @@ import java.io.File;
 import java.net.InetAddress;
 import java.rmi.RemoteException;
 import java.security.Key;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Hashtable;
+import java.util.*;
 
 import dev.thuan.Commons;
 import dev.thuan.Config;
@@ -375,6 +372,23 @@ public class Viewer extends Thread {
         Enumeration<Integer> viewerEnum = viewers.keys();
         while (viewerEnum.hasMoreElements())
             removeViewer(viewerEnum.nextElement());
+    }
+
+    public void sendMessage(String message, InetAddress address) {
+        try {
+            client.rmiServer.sendMessage(message, address);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Queue<String> receiveMessage(InetAddress address) {
+        try {
+            return client.rmiServer.receiveMessage(address);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public static void setScreenCapture(byte[] data, int index) {

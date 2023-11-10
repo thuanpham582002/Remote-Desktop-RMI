@@ -9,17 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d910609a-5962-4883-ba5f-1ceb2bfbd1b0" name="Changes" comment="remove ssl/multihome">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/KeyEventAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/KeyEventWrapper.java" afterDir="false" />
+    <list default="true" id="d910609a-5962-4883-ba5f-1ceb2bfbd1b0" name="Changes" comment="fix keyboard not work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Remote_Desktop_RMI_jar/Remote-Desktop-RMI.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Remote_Desktop_RMI_jar/Remote-Desktop-RMI.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/client/MultihomeRMIClientSocketFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/mainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/mainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/client/RMIClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/client/RMIClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/RMIServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/RMIServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/ActiveConnectionsJPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/ActiveConnectionsJPanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/ActiveConnectionsJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/ActiveConnectionsJPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/robot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/EventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/EventsListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Viewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Viewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/KeyEventAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/KeyboardCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +120,8 @@
       <workItem from="1699519143804" duration="739000" />
       <workItem from="1699521916496" duration="4581000" />
       <workItem from="1699544189450" duration="5364000" />
-      <workItem from="1699549670937" duration="2753000" />
+      <workItem from="1699549670937" duration="6912000" />
+      <workItem from="1699572688875" duration="7292000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -165,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699522282271</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix keyboard not work">
+      <option name="closed" value="true" />
+      <created>1699552753873</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699552753873</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,17 +213,7 @@
     <MESSAGE value="hide some item in colfig and setting" />
     <MESSAGE value="remove author" />
     <MESSAGE value="remove ssl/multihome" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove ssl/multihome" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dev/thuan/mainFrame.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="fix keyboard not work" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix keyboard not work" />
   </component>
 </project>

@@ -7,9 +7,11 @@ package dev.thuan.server;
 import java.net.InetAddress;
 import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.Timer;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
+import dev.thuan.ChatJFrame;
 import dev.thuan.rmi.server.RMIServer;
 import dev.thuan.viewer.Viewer;
 
@@ -43,7 +45,7 @@ public class ActiveConnectionsJPanel extends javax.swing.JPanel {
         jButtonDisconnectAll = new javax.swing.JButton();
         jButtonRefresh = new javax.swing.JButton();
         jButtonDisconnect = new javax.swing.JButton();
-        jButtonProperties = new javax.swing.JButton();
+        jButtonChat = new javax.swing.JButton();
         jButtonDetails = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
@@ -72,11 +74,11 @@ public class ActiveConnectionsJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButtonProperties.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dev/thuan/images/props.png"))); // NOI18N
-        jButtonProperties.setText("Properties");
-        jButtonProperties.addActionListener(new java.awt.event.ActionListener() {
+        jButtonChat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dev/thuan/images/props.png"))); // NOI18N
+        jButtonChat.setText("Chat");
+        jButtonChat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPropertiesActionPerformed(evt);
+                jButtonChatActionPerformed(evt);
             }
         });
 
@@ -102,7 +104,7 @@ public class ActiveConnectionsJPanel extends javax.swing.JPanel {
                                         .add(jButtonDisconnectAll, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .add(jButtonRefresh, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .add(jButtonDetails, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .add(jButtonProperties, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .add(jButtonChat, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .add(jButtonDisconnect, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
                                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -115,7 +117,7 @@ public class ActiveConnectionsJPanel extends javax.swing.JPanel {
                                         .add(org.jdesktop.layout.GroupLayout.LEADING, layout.createSequentialGroup()
                                                 .add(jButtonDisconnect)
                                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                                .add(jButtonProperties)
+                                                .add(jButtonChat)
                                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                                 .add(jButtonDetails)
                                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -160,14 +162,21 @@ public class ActiveConnectionsJPanel extends javax.swing.JPanel {
         updateList();
     }//GEN-LAST:event_jButtonDisconnectActionPerformed
 
-    private void jButtonPropertiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPropertiesActionPerformed
+    private void jButtonChatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonChatActionPerformed
         int index = jList1.getSelectedIndex();
         if (index == -1) return;
+        Hashtable<Integer, InetAddress> hosts;
         if (RMIServer.serverConfig.reverseConnection)
-            Viewer.displayViewerProperties(viewerKeys.get(index));
+            hosts = Viewer.getConnectedHosts();
         else
-            Server.displayViewerProperties(viewerKeys.get(index));
-    }//GEN-LAST:event_jButtonPropertiesActionPerformed
+            hosts = Server.getConnectedHosts();
+
+        hosts.get(viewerKeys.get(index));
+        ChatJFrame chatJPanel = new ChatJFrame(hosts.get(viewerKeys.get(index)));
+        System.out.println("ChatJPanel created");
+        chatJPanel.setVisible(true);
+
+    }//GEN-LAST:event_jButtonChatActionPerformed
 
     private void jButtonDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDetailsActionPerformed
         int index = jList1.getSelectedIndex();
@@ -198,10 +207,10 @@ public class ActiveConnectionsJPanel extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonChat;
     private javax.swing.JButton jButtonDetails;
     private javax.swing.JButton jButtonDisconnect;
     private javax.swing.JButton jButtonDisconnectAll;
-    private javax.swing.JButton jButtonProperties;
     private javax.swing.JButton jButtonRefresh;
     private javax.swing.JList jList1;
     private javax.swing.JScrollPane jScrollPane1;

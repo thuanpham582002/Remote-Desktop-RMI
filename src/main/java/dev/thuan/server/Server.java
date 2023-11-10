@@ -10,10 +10,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.net.InetAddress;
 import java.rmi.RemoteException;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Hashtable;
+import java.util.*;
 
 import dev.thuan.Commons;
 import dev.thuan.Config;
@@ -42,6 +39,8 @@ public class Server extends Thread {
 
     private static final Hashtable<Integer, ViewerOptions> viewers =
             new Hashtable<Integer, ViewerOptions>();
+
+    private static final Hashtable<InetAddress, Queue<String>> messageQueues = new Hashtable<>();
 
     private int index = -1;
     private Recorder recorder;
@@ -374,6 +373,23 @@ public class Server extends Thread {
             re.printStackTrace();
         }
     }
+
+
+    public static void sendMessage(String message, InetAddress address, Boolean hostRequire) {
+        if (!messageQueues.containsKey(address)) {
+            messageQueues.put(address, new LinkedList<>());
+        }
+        messageQueues.get(address).add(message);
+    }
+
+    public static Queue<String> receiveMessage(InetAddress address, Boolean hostRequire) {
+        if (!messageQueues.containsKey(address)) {
+            return null;
+        }
+        return messageQueues.get(address);
+    }
+
+
 
     public void sendData() {
         if (isOptionsChanged()) {

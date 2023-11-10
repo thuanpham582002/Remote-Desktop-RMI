@@ -7,6 +7,7 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.Queue;
 
 /**
  * ServerInterface.java
@@ -22,6 +23,10 @@ public interface ServerInterface extends Remote {
                     String username, String password, boolean isReversedConnection) throws RemoteException;
 
     void stopViewer(int index) throws RemoteException;
+
+    void sendMessage(String message, InetAddress address) throws RemoteException;
+
+    Queue<String> receiveMessage(InetAddress address) throws RemoteException;
 
     HashMap<String, byte[]> getChangedScreenBlocks(int index,
                                                    boolean isEmpty) throws RemoteException;
