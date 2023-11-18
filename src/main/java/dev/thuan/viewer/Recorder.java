@@ -72,7 +72,7 @@ public class Recorder extends Thread {
     }
 
     public void init() {
-        clipbrdUtility = new ClipbrdUtility();
+        clipbrdUtility = ClipbrdUtility.getInstance();
         fileManager = new FileManager(this);
     }
 
@@ -125,7 +125,8 @@ public class Recorder extends Thread {
         pause = true;
         hold = true;
         viewOnly = false;
-        clipbrdUtility.removeFlavorListener();
+        // TODO: 11/18/2023
+//        clipbrdUtility.removeFlavorListener();
         if (viewerGUI.isFullScreenMode())
             viewerGUI.changeFullScreenMode();
         if (!config.reverseConnection || side == Commons.viewerSide) {
@@ -160,7 +161,8 @@ public class Recorder extends Thread {
         if (!config.reverseConnection || side == Commons.viewerSide)
             eventsListener.addAdapters(true);
 
-        clipbrdUtility.addFlavorListener();
+        // TODO: 11/18/2023
+//        clipbrdUtility.addFlavorListener();
 
         recording = true;
         pause = false;

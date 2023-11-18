@@ -136,7 +136,6 @@ public class robot extends Thread {
         Graphics2D g2d = bimage.createGraphics();
         g2d.drawImage(screen, 0, 0, screenRect.width, screenRect.height, null);
         // g2d.dispose ();
-
         return bimage;
     }
 
@@ -183,16 +182,22 @@ public class robot extends Thread {
 
     public void setKeyEvent(KeyEvent evt) {
         int keyCode = evt.getKeyCode();
-        switch (evt.getID()) {
-            case KeyEvent.KEY_PRESSED:
-                rt.keyPress(keyCode);
-                break;
-            case KeyEvent.KEY_RELEASED:
-                rt.keyRelease(keyCode);
-                break;
-            default:
-                System.out.println("Unknown key event: " + evt);
-                break;
+        try {
+
+            switch (evt.getID()) {
+                case KeyEvent.KEY_PRESSED:
+                    rt.keyPress(keyCode);
+                    break;
+                case KeyEvent.KEY_RELEASED:
+                    rt.keyRelease(keyCode);
+                    break;
+                default:
+                    System.out.println("Unknown key event: " + evt);
+                    break;
+            }
+        } catch (Exception e) {
+            System.out.println("Unknown key event: " + evt);
+            e.printStackTrace();
         }
     }
 }

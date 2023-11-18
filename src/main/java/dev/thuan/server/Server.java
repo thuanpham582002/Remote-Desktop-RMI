@@ -63,7 +63,7 @@ public class Server extends Thread {
     public static void init() {
         running = true;
         rt = new robot();
-        clipbrdUtility = new ClipbrdUtility();
+        clipbrdUtility = ClipbrdUtility.getInstance();
         SysTray.updateServerStatus(Commons.SERVER_STARTED);
     }
 
@@ -245,6 +245,7 @@ public class Server extends Thread {
     }
 
     public static Object getClipboardContent() {
+        System.out.println("Server.getClipboardContent()");
         return clipbrdUtility.getContent();
     }
 
@@ -388,7 +389,6 @@ public class Server extends Thread {
         }
         return messageQueues.get(address);
     }
-
 
 
     public void sendData() {

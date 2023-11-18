@@ -1,26 +1,20 @@
 package dev.thuan.viewer;
 
-import java.awt.Rectangle;
+import dev.thuan.*;
+import dev.thuan.rmi.client.RMIClient;
+import dev.thuan.rmi.server.RMIServer;
+import dev.thuan.server.robot;
+import dev.thuan.utilities.screenCaptureCompressor.ScreenCapture;
+import dev.thuan.viewer.FileMng.FileTransGUI;
+
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.net.InetAddress;
 import java.rmi.RemoteException;
-import java.security.Key;
+import java.util.Queue;
 import java.util.*;
-
-import dev.thuan.Commons;
-import dev.thuan.Config;
-import dev.thuan.HostProperties;
-import dev.thuan.ConnectionInfos;
-import dev.thuan.SysTray;
-import dev.thuan.rmi.client.RMIClient;
-import dev.thuan.rmi.server.RMIServer;
-import dev.thuan.server.robot;
-import dev.thuan.utilities.ClipbrdUtility;
-import dev.thuan.utilities.GsonUtility;
-import dev.thuan.utilities.screenCaptureCompressor.ScreenCapture;
-import dev.thuan.viewer.FileMng.FileTransGUI;
 
 /**
  * Viewer.java
@@ -37,7 +31,7 @@ public class Viewer extends Thread {
 
     private static final Hashtable<Integer, Recorder> viewers =
             new Hashtable<Integer, Recorder>();
-    private static ClipbrdUtility clipbrdUtility;
+//    private static ClipbrdUtility clipbrdUtility;
 
     private static boolean running = false;
 
@@ -336,7 +330,7 @@ public class Viewer extends Thread {
     public static void init() {
         running = true;
         rt = new robot();
-        clipbrdUtility = new ClipbrdUtility();
+//        clipbrdUtility = new ClipbrdUtility();
         SysTray.updateServerStatus(Commons.SERVER_STARTED);
     }
 

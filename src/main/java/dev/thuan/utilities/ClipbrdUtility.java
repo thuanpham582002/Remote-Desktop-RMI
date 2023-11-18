@@ -29,7 +29,16 @@ public class ClipbrdUtility {
     private String txt = "thuan";
     private ImageIcon img = new ImageIcon(Commons.ALIVE_ICON);
 
-    public ClipbrdUtility() {
+    private static ClipbrdUtility instance = null;
+
+    public static ClipbrdUtility getInstance() {
+        if (instance == null) {
+            instance = new ClipbrdUtility();
+        }
+        return instance;
+    }
+
+    private ClipbrdUtility() {
         initClipboard();
         clipboard.addFlavorListener(flavorlistener);
     }
@@ -45,6 +54,7 @@ public class ClipbrdUtility {
 
                     if (content.isDataFlavorSupported(DataFlavor.stringFlavor)) {
                         String newtxt = (String) clipboard.getData(DataFlavor.stringFlavor);
+                        System.out.println("newtxt: " + newtxt);
                         if (!txt.equals(newtxt)) {
                             txt = newtxt;
                             object = txt;
@@ -57,6 +67,7 @@ public class ClipbrdUtility {
                         }
                     }
                 } catch (Exception ex) {
+                    System.out.println("Clipboard flavor listener error!");
                     ex.printStackTrace();
                 }
             }
@@ -109,6 +120,7 @@ public class ClipbrdUtility {
                 files = list.toArray(new File[list.size()]); //.clone();
             }
         } catch (Exception e) {
+            System.out.println("Clipboard getFiles error!");
             e.printStackTrace();
         }
         return files;

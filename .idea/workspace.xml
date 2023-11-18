@@ -9,7 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d910609a-5962-4883-ba5f-1ceb2bfbd1b0" name="Changes" comment="add chat function" />
+    <list default="true" id="d910609a-5962-4883-ba5f-1ceb2bfbd1b0" name="Changes" comment="hide function configJpanel">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Remote_Desktop_RMI_jar/Remote-Desktop-RMI.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Remote_Desktop_RMI_jar/Remote-Desktop-RMI.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/robot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/utilities/ClipbrdUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/utilities/ClipbrdUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Recorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Recorder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Viewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Viewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,25 +46,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/01655/IdeaProjects/RM/Remote-Desktop-RMI/src/main/java/dev/thuan/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/01655/IdeaProjects/hellospring",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\01655\IdeaProjects\RM\Remote-Desktop-RMI\src\main\java\org" />
@@ -105,7 +115,18 @@
       <workItem from="1699521916496" duration="4581000" />
       <workItem from="1699544189450" duration="5364000" />
       <workItem from="1699549670937" duration="6912000" />
-      <workItem from="1699572688875" duration="7652000" />
+      <workItem from="1699572688875" duration="9936000" />
+      <workItem from="1699585672743" duration="2407000" />
+      <workItem from="1699616956520" duration="16000" />
+      <workItem from="1699621002186" duration="267000" />
+      <workItem from="1700010782654" duration="1709000" />
+      <workItem from="1700014756108" duration="89000" />
+      <workItem from="1700055552578" duration="861000" />
+      <workItem from="1700183492946" duration="5972000" />
+      <workItem from="1700211992183" duration="1253000" />
+      <workItem from="1700213967947" duration="1540000" />
+      <workItem from="1700231261859" duration="31000" />
+      <workItem from="1700275508313" duration="3548000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -171,7 +192,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699580345533</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="hide function viewer">
+      <option name="closed" value="true" />
+      <created>1699580633734</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699580633734</updated>
+    </task>
+    <task id="LOCAL-00010" summary="hide function configJpanel">
+      <option name="closed" value="true" />
+      <created>1699580793521</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699580793521</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +244,22 @@
     <MESSAGE value="remove ssl/multihome" />
     <MESSAGE value="fix keyboard not work" />
     <MESSAGE value="add chat function" />
-    <option name="LAST_COMMIT_MESSAGE" value="add chat function" />
+    <MESSAGE value="hide function viewer" />
+    <MESSAGE value="hide function configJpanel" />
+    <option name="LAST_COMMIT_MESSAGE" value="hide function configJpanel" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerInterface.java</url>
+          <line>54</line>
+          <properties class="dev.thuan.rmi.server.ServerInterface" method="setClipboardContent">
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

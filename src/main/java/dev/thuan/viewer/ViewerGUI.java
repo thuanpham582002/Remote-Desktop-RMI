@@ -51,7 +51,7 @@ public class ViewerGUI extends javax.swing.JFrame {
         jSeparator9.setVisible(false);
         jLabel2.setVisible(false);
         jComboBoxScreenZoom.setVisible(false);
-        jSeparator4 .setVisible(false);
+        jSeparator4.setVisible(false);
         jLabel3.setVisible(false);
         jCheckBoxScreenCompress.setVisible(false);
         jSeparator15.setVisible(false);
@@ -61,8 +61,8 @@ public class ViewerGUI extends javax.swing.JFrame {
         jSeparator11.setVisible(false);
         jLabel1.setVisible(false);
         jComboBoxColorQuality.setVisible(false);
-        jSeparator14 .setVisible(false);
-        jLabel6 .setVisible(false);
+        jSeparator14.setVisible(false);
+        jLabel6.setVisible(false);
         jComboBoxRefreshRate.setVisible(false);
         jSeparator5.setVisible(false);
 //        jLabel5.setVisible(false);
@@ -564,15 +564,17 @@ public class ViewerGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtnCloseActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        if (recorder.viewerOptions.getClipboardTransfer())
-            recorder.clipbrdUtility.addFlavorListener();
+        // TODO: 11/18/2023
+//        if (recorder.viewerOptions.getClipboardTransfer())
+//            recorder.clipbrdUtility.addFlavorListener();
         if (recorder.isRecording() && !recorder.isPaused() && !recorder.isViewOnly())
             recorder.eventsListener.addAdapters();
     }//GEN-LAST:event_formWindowActivated
 
     private void formWindowDeactivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowDeactivated
-        if (recorder.viewerOptions.getClipboardTransfer())
-            recorder.clipbrdUtility.removeFlavorListener();
+        // TODO: 11/18/2023
+//        if (recorder.viewerOptions.getClipboardTransfer())
+//            recorder.clipbrdUtility.removeFlavorListener();
         recorder.eventsListener.removeAdapters();
     }//GEN-LAST:event_formWindowDeactivated
 
@@ -689,10 +691,11 @@ public class ViewerGUI extends javax.swing.JFrame {
 
     public void setClipboardTransfer(boolean bool) {
         recorder.viewerOptions.setClipboardTransfer(bool);
-        if (bool)
-            recorder.clipbrdUtility.addFlavorListener();
-        else
-            recorder.clipbrdUtility.removeFlavorListener();
+        // TODO: 11/18/2023
+//        if (bool)
+//            recorder.clipbrdUtility.addFlavorListener();
+//        else
+//            recorder.clipbrdUtility.removeFlavorListener();
         if (recorder.isRecording()) {
             if (recorder.config.reverseConnection)
                 recorder.viewerOptions.setChanged(true);
