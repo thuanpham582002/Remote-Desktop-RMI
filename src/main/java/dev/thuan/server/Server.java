@@ -44,7 +44,7 @@ public class Server extends Thread {
     private static final Hashtable<InetAddress, Queue<String>> messageQueues = new Hashtable<>();
     private static final Hashtable<InetAddress, List<Map.Entry<Point, Point>>> drawOverlayPoints = new Hashtable<>();
 
-    private static final Hashtable<InetAddress, Overlay> overlays = new Hashtable<>();
+    private static final Overlay overlay = new Overlay(null);
     private int index = -1;
     private Recorder recorder;
 
@@ -263,21 +263,14 @@ public class Server extends Thread {
     public static void setDrawOverlayPoint(List<Map.Entry<Point, Point>> points, InetAddress address) {
         if (points == null) {
             drawOverlayPoints.remove(address);
-            if (overlays.containsKey(address)) {
-                overlays.get(address).destroy();
-                overlays.remove(address);
-            }
-            return;
-        }
-        if (!drawOverlayPoints.containsKey(address)) {
+        } else if (!drawOverlayPoints.containsKey(address)) {
             drawOverlayPoints.put(address, points);
-            overlays.put(address, new Overlay(null, points));
         } else {
             System.out.println("setDrawOverlayPoint: " + address);
             drawOverlayPoints.get(address).clear();
             drawOverlayPoints.get(address).addAll(points);
-            overlays.get(address).updatePoints(points);
         }
+        overlay.setOverlays(drawOverlayPoints);
     }
 
     public boolean isConnected() {

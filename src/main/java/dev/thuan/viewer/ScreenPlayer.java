@@ -133,7 +133,7 @@ public class ScreenPlayer extends JLabel {
             _scaleY = (float) recorder.viewerOptions.getCurrentScreenRect().height / screenRect.height;
         }
 
-        System.out.println("scaleX: " + _scaleX + " scaleY: " + _scaleY);
+//        System.out.println("scaleX: " + _scaleX + " scaleY: " + _scaleY);
         g.setColor(Color.RED);
         g.setPaintMode();
         if (srcx == destx && srcy == desty) {

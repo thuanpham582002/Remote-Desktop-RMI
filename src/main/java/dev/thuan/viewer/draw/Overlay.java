@@ -2,12 +2,12 @@ package dev.thuan.viewer.draw;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.AbstractMap;
+import java.net.InetAddress;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
 
 public class Overlay extends JWindow {
-    private List<Map.Entry<Point, Point>> points;
+    private List<Map.Entry<Point, Point>> points = new ArrayList<>();
 
     public Overlay(Window owner, List<Map.Entry<Point, Point>> points) {
         super(owner);
@@ -39,12 +39,6 @@ public class Overlay extends JWindow {
     public void paint(Graphics g) {
         super.paint(g);
         g.setColor(Color.RED);
-        if (points == null) {
-            // clean screen
-            System.out.println("Cleaning overlay");
-            g.clearRect(0, 0, getWidth(), getHeight());
-            return;
-        }
         for (Map.Entry<Point, Point> entry : points) {
             Point start = entry.getKey();
             Point end = entry.getValue();
@@ -87,5 +81,14 @@ public class Overlay extends JWindow {
                 new AbstractMap.SimpleEntry(new Point(200, 200), new Point(300, 300)),
                 new AbstractMap.SimpleEntry(new Point(300, 300), new Point(400, 400))
         ));
+    }
+
+    public void setOverlays(Hashtable<InetAddress, List<Map.Entry<Point, Point>>> overlays) {
+        points.clear();
+        for (List<Map.Entry<Point, Point>> overlay : overlays.values()) {
+            points.addAll(overlay);
+        }
+        System.out.println("Setting overlays" + points.size());
+        repaint();
     }
 }

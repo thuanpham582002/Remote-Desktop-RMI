@@ -9,24 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d910609a-5962-4883-ba5f-1ceb2bfbd1b0" name="Changes" comment="hide function configJpanel">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/draw/DrawArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/draw/Overlay.java" afterDir="false" />
+    <list default="true" id="d910609a-5962-4883-ba5f-1ceb2bfbd1b0" name="Changes" comment="add overlay draw function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Remote_Desktop_RMI_jar/Remote-Desktop-RMI.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Remote_Desktop_RMI_jar/Remote-Desktop-RMI.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/Commons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/Commons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/mainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/mainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/EventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/EventsListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Recorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Recorder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ScreenPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ScreenPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Viewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Viewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/draw/Overlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/draw/Overlay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +160,9 @@
       <workItem from="1700490666493" duration="811000" />
       <workItem from="1700661043708" duration="6753000" />
       <workItem from="1700702107805" duration="5065000" />
-      <workItem from="1700707485365" duration="1666000" />
+      <workItem from="1700707485365" duration="2591000" />
+      <workItem from="1700745799884" duration="2174000" />
+      <workItem from="1700748091018" duration="2536000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -254,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699580793521</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add overlay draw function">
+      <option name="closed" value="true" />
+      <created>1700709417725</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1700709417725</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +290,7 @@
     <MESSAGE value="add chat function" />
     <MESSAGE value="hide function viewer" />
     <MESSAGE value="hide function configJpanel" />
-    <option name="LAST_COMMIT_MESSAGE" value="hide function configJpanel" />
+    <MESSAGE value="add overlay draw function" />
+    <option name="LAST_COMMIT_MESSAGE" value="add overlay draw function" />
   </component>
 </project>
