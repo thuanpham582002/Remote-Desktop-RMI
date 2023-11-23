@@ -5,6 +5,7 @@
 
 package dev.thuan.viewer;
 
+import java.awt.*;
 import java.awt.dnd.DropTarget;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -65,9 +66,10 @@ public class EventsListener {
 
             @Override
             public void mouseDragged(MouseEvent e) {
-                if (player.isSelecting) {
+                if (player.isSelecting || player.drawOverlay) {
                     player.destx = e.getX();
                     player.desty = e.getY();
+                    player.repaint();
                 } else
                     mouseEvents.add(e);
             }
@@ -76,7 +78,7 @@ public class EventsListener {
         mouseAdapter = new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
-                if (player.isSelecting) {
+                if (player.isSelecting || player.drawOverlay) {
                     player.destx = player.srcx = e.getX();
                     player.desty = player.srcy = e.getY();
                 } else

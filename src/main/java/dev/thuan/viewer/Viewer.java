@@ -13,8 +13,10 @@ import java.awt.event.MouseEvent;
 import java.io.File;
 import java.net.InetAddress;
 import java.rmi.RemoteException;
+import java.util.List;
 import java.util.Queue;
 import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * Viewer.java
@@ -203,6 +205,28 @@ public class Viewer extends Thread {
         setMouseEvents();
         setKeyEvents();
         setClipboardContect();
+        setDrawOverlayPointer();
+    }
+
+    private void setDrawOverlayPointer() {
+        if (!recorder.screenPlayer.drawOverlay) {
+            try {
+                client.rmiServer.setDrawOverlayPoint(null,
+                        recorder.viewerOptions.getInetAddress());
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+            return;
+        }
+        try {
+            // Create a copy of the list to avoid ConcurrentModificationException
+            List<Map.Entry<Point, Point>> copyOfDrawOverlayPoints = new CopyOnWriteArrayList<>(recorder.screenPlayer.getDrawOverlayPoints());
+            client.rmiServer.setDrawOverlayPoint(
+                    copyOfDrawOverlayPoints,
+                    recorder.viewerOptions.getInetAddress());
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
     }
 
     public void receiveData() {

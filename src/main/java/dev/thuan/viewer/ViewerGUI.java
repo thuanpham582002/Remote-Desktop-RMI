@@ -1,6 +1,8 @@
 package dev.thuan.viewer;
 
 import java.awt.GraphicsDevice;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import java.awt.event.WindowEvent;
 import java.io.File;
 import java.net.InetAddress;
@@ -31,7 +33,14 @@ public class ViewerGUI extends javax.swing.JFrame {
     public ViewerGUI(Recorder recorder) {
         this.recorder = recorder;
         initComponents();
+
         jScrollPane1.setViewportView(recorder.screenPlayer);
+        this.addComponentListener(new ComponentAdapter() {
+            public void componentResized(ComponentEvent e) {
+                System.out.println("Size Changed" + e.getComponent().getSize());
+                recorder.viewerOptions.setCurrentScreenRect(jScrollPane1.getBounds());
+            }
+        });
         setVisible(true);
         Main.activeConnection++;
         jPopupMenuFileTranfer.setVisible(false);
@@ -44,20 +53,13 @@ public class ViewerGUI extends javax.swing.JFrame {
 //        jToolBar1.setVisible(false);
         jBtnStartStop.setVisible(false);
         jToggleBtnPauseResume.setVisible(false);
-        jBtnViewCtrl.setVisible(false);
-        jSeparator1.setVisible(false);
-        jBtnFullNormal.setVisible(false);
+//        jBtnViewCtrl.setVisible(false);
+//        jSeparator1.setVisible(false);
+//        jBtnFullNormal.setVisible(false);
         jBtnPartialComplete.setVisible(false);
         jSeparator9.setVisible(false);
-        jLabel2.setVisible(false);
-        jComboBoxScreenZoom.setVisible(false);
         jSeparator4.setVisible(false);
-        jLabel3.setVisible(false);
-        jCheckBoxScreenCompress.setVisible(false);
         jSeparator15.setVisible(false);
-        jLabel4.setVisible(false);
-        jCheckBoxImageQuality.setVisible(false);
-        jComboBoxImageQuality.setVisible(false);
         jSeparator11.setVisible(false);
         jLabel1.setVisible(false);
         jComboBoxColorQuality.setVisible(false);
@@ -129,6 +131,8 @@ public class ViewerGUI extends javax.swing.JFrame {
         jSeparator12 = new javax.swing.JToolBar.Separator();
         jBtnClose = new javax.swing.JButton();
         jSeparator10 = new javax.swing.JToolBar.Separator();
+        jLabel7 = new javax.swing.JLabel();
+        jCheckBoxDrawOverlay = new javax.swing.JCheckBox();
         jScrollPane1 = new javax.swing.JScrollPane();
 
         jMenuItemSendFilesFromClipbrd.setText("Send files from clipborad");
@@ -168,7 +172,7 @@ public class ViewerGUI extends javax.swing.JFrame {
         jPopupMenuHelp.add(jMenuItemHostProps);
 
         jMenuItemAbout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dev/thuan/images/about.png"))); // NOI18N
-        jMenuItemAbout.setText("About noRoom2013");
+        jMenuItemAbout.setText("About dev.thuan");
         jMenuItemAbout.setToolTipText("");
         jMenuItemAbout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,31 +182,26 @@ public class ViewerGUI extends javax.swing.JFrame {
         jPopupMenuHelp.add(jMenuItemAbout);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        setTitle(" noRoom2013 Viewer");
+        setTitle(" dev.thuan Viewer");
         setIconImage(new ImageIcon(Commons.WAIT_ICON).getImage());
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
             }
-
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
             }
-
             public void windowDeactivated(java.awt.event.WindowEvent evt) {
                 formWindowDeactivated(evt);
             }
-
             public void windowDeiconified(java.awt.event.WindowEvent evt) {
                 formWindowDeiconified(evt);
             }
-
             public void windowIconified(java.awt.event.WindowEvent evt) {
                 formWindowIconified(evt);
             }
         });
 
-        jToolBar1.setFloatable(false);
         jToolBar1.setFocusable(false);
         jToolBar1.setMaximumSize(new java.awt.Dimension(713, 35));
 
@@ -272,8 +271,7 @@ public class ViewerGUI extends javax.swing.JFrame {
         jLabel2.setFocusable(false);
         jToolBar1.add(jLabel2);
 
-        jComboBoxScreenZoom.setModel(new javax.swing.DefaultComboBoxModel(new String[]{"25", "50", "75", "100", "125", "150", "200"}));
-        jComboBoxScreenZoom.setSelectedIndex(3);
+        jComboBoxScreenZoom.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "25", "50", "75", "100", "125", "150", "200", "0" }));
         jComboBoxScreenZoom.setToolTipText("Change screen zoom (%)");
         jComboBoxScreenZoom.setFocusable(false);
         jComboBoxScreenZoom.setMaximumSize(new java.awt.Dimension(70, 20));
@@ -320,7 +318,7 @@ public class ViewerGUI extends javax.swing.JFrame {
         });
         jToolBar1.add(jCheckBoxImageQuality);
 
-        jComboBoxImageQuality.setModel(new javax.swing.DefaultComboBoxModel(new String[]{"0", "25", "33", "50", "66", "75", "100"}));
+        jComboBoxImageQuality.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "25", "33", "50", "66", "75", "100" }));
         jComboBoxImageQuality.setSelectedIndex(5);
         jComboBoxImageQuality.setToolTipText("Change image quality (%)");
         jComboBoxImageQuality.setEnabled(false);
@@ -342,7 +340,7 @@ public class ViewerGUI extends javax.swing.JFrame {
         jLabel1.setFocusable(false);
         jToolBar1.add(jLabel1);
 
-        jComboBoxColorQuality.setModel(new javax.swing.DefaultComboBoxModel(new String[]{"High", "Medium", "Low", "Gray"}));
+        jComboBoxColorQuality.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "High", "Medium", "Low", "Gray" }));
         jComboBoxColorQuality.setToolTipText("Change color quality");
         jComboBoxColorQuality.setFocusable(false);
         jComboBoxColorQuality.setLightWeightPopupEnabled(false);
@@ -361,7 +359,7 @@ public class ViewerGUI extends javax.swing.JFrame {
         jLabel6.setToolTipText("Refresh rate (ms)");
         jToolBar1.add(jLabel6);
 
-        jComboBoxRefreshRate.setModel(new javax.swing.DefaultComboBoxModel(new String[]{"0", "250", "500", "750", "1000", "3000", "6000", "9000"}));
+        jComboBoxRefreshRate.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "250", "500", "750", "1000", "3000", "6000", "9000" }));
         jComboBoxRefreshRate.setSelectedIndex(2);
         jComboBoxRefreshRate.setToolTipText("Change screen refresh rate");
         jComboBoxRefreshRate.setFocusable(false);
@@ -408,7 +406,7 @@ public class ViewerGUI extends javax.swing.JFrame {
         jToolBar1.add(jSeparator6);
 
         jBtnHelp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dev/thuan/images/help.png"))); // NOI18N
-        jBtnHelp.setToolTipText("Chat");
+        jBtnHelp.setToolTipText("Help");
         jBtnHelp.setFocusable(false);
         jBtnHelp.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jBtnHelp.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -433,23 +431,37 @@ public class ViewerGUI extends javax.swing.JFrame {
         jToolBar1.add(jBtnClose);
         jToolBar1.add(jSeparator10);
 
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dev/thuan/images/background.png"))); // NOI18N
+        jLabel7.setToolTipText("Draw over screen");
+        jToolBar1.add(jLabel7);
+
+        jCheckBoxDrawOverlay.setFocusable(false);
+        jCheckBoxDrawOverlay.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBoxDrawOverlay.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jCheckBoxDrawOverlay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxDrawOverlayActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(jCheckBoxDrawOverlay);
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                        .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 818, Short.MAX_VALUE)
-                        .add(jToolBar1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 818, Short.MAX_VALUE)
+            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 818, Short.MAX_VALUE)
+            .add(jToolBar1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 818, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                        .add(layout.createSequentialGroup()
-                                .add(jToolBar1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE))
+            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(layout.createSequentialGroup()
+                .add(jToolBar1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE))
         );
 
-        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width - 828) / 2, (screenSize.height - 450) / 2, 828, 450);
+        setSize(new java.awt.Dimension(828, 450));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtnStartStopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnStartStopActionPerformed
@@ -641,6 +653,10 @@ public class ViewerGUI extends javax.swing.JFrame {
         Main.displayTab(4);
     }//GEN-LAST:event_jMenuItemAboutActionPerformed
 
+    private void jCheckBoxDrawOverlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxDrawOverlayActionPerformed
+        setDrawOverlay(jCheckBoxDrawOverlay.isSelected());
+    }//GEN-LAST:event_jCheckBoxDrawOverlayActionPerformed
+
     public boolean isFullScreenMode() {
         return fullScreenMode;
     }
@@ -681,12 +697,12 @@ public class ViewerGUI extends javax.swing.JFrame {
                 break;
         }
         recorder.viewerOptions.setColorQuality(colorQuality);
-        if (recorder.isRecording()) {
-            if (recorder.config.reverseConnection)
-                recorder.viewerOptions.setChanged(true);
-            else
-                recorder.viewer.setOption(Commons.COLOR_OPTION);
-        }
+//        if (recorder.isRecording()) {
+//            if (recorder.config.reverseConnection)
+//                recorder.viewerOptions.setChanged(true);
+//            else
+//                recorder.viewer.setOption(Commons.COLOR_OPTION);
+//        }
     }
 
     public void setClipboardTransfer(boolean bool) {
@@ -696,12 +712,24 @@ public class ViewerGUI extends javax.swing.JFrame {
 //            recorder.clipbrdUtility.addFlavorListener();
 //        else
 //            recorder.clipbrdUtility.removeFlavorListener();
-        if (recorder.isRecording()) {
-            if (recorder.config.reverseConnection)
-                recorder.viewerOptions.setChanged(true);
-            else
-                recorder.viewer.setOption(Commons.CLIPBOARD_OPTION);
-        }
+//        if (recorder.isRecording()) {
+//            if (recorder.config.reverseConnection)
+//                recorder.viewerOptions.setChanged(true);
+//            else
+//                recorder.viewer.setOption(Commons.CLIPBOARD_OPTION);
+//        }
+    }
+
+
+    public void setDrawOverlay(boolean bool) {
+        recorder.screenPlayer.setDrawOverlay(bool);
+        recorder.viewerOptions.setDrawOverlay(bool);
+//        if (recorder.isRecording()) {
+//            if (recorder.config.reverseConnection)
+//                recorder.viewerOptions.setChanged(true);
+//            else
+//                recorder.viewer.setOption(Commons.OVERLAY_OPTION);
+//        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -713,6 +741,7 @@ public class ViewerGUI extends javax.swing.JFrame {
     private javax.swing.JButton jBtnStartStop;
     private javax.swing.JButton jBtnViewCtrl;
     private javax.swing.JCheckBox jCheckBoxClipTrans;
+    private javax.swing.JCheckBox jCheckBoxDrawOverlay;
     private javax.swing.JCheckBox jCheckBoxImageQuality;
     private javax.swing.JCheckBox jCheckBoxScreenCompress;
     private javax.swing.JComboBox jComboBoxColorQuality;
@@ -725,6 +754,7 @@ public class ViewerGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JMenuItem jMenuItemAbout;
     private javax.swing.JMenuItem jMenuItemConnectInfo;
     private javax.swing.JMenuItem jMenuItemHostProps;

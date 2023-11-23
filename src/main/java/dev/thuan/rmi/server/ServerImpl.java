@@ -1,6 +1,6 @@
 package dev.thuan.rmi.server;
 
-import java.awt.Rectangle;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.net.InetAddress;
@@ -8,10 +8,8 @@ import java.rmi.RemoteException;
 import java.rmi.server.RMIClientSocketFactory;
 import java.rmi.server.RMIServerSocketFactory;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Queue;
+import java.util.*;
+import java.util.List;
 
 import dev.thuan.server.Server;
 import dev.thuan.utilities.GsonUtility;
@@ -125,6 +123,11 @@ public class ServerImpl extends UnicastRemoteObject implements ServerInterface {
     @Override
     public void setKeyEvents(ArrayList events) throws RemoteException {
         Server.setKeyEvents(events);
+    }
+
+    @Override
+    public void setDrawOverlayPoint(List<Map.Entry<Point, Point>> points, InetAddress address) throws RemoteException {
+        Server.setDrawOverlayPoint(points, address);
     }
 
     @Override

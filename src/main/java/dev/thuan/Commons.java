@@ -55,8 +55,8 @@ public class Commons {
     public static String TRUST_STORE = "truststore";
 
     public static float java_version = 1.5f;
-    public static final String noRoom2013_version = "week 2";
-    public static String noRoom2013_build_date = "2009-09-16";
+    public static final String noRoom2013_version = "week 3";
+    public static String noRoom2013_build_date = "11/19/2023";
 
     public static final byte RECT_OPTION = 0;
     public static final byte IMAGE_OPTION = 1;

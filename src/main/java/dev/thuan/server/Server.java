@@ -1,7 +1,6 @@
 package dev.thuan.server;
 
-import java.awt.Rectangle;
-import java.awt.Toolkit;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -11,6 +10,7 @@ import java.io.FileOutputStream;
 import java.net.InetAddress;
 import java.rmi.RemoteException;
 import java.util.*;
+import java.util.List;
 
 import dev.thuan.Commons;
 import dev.thuan.Config;
@@ -25,6 +25,7 @@ import dev.thuan.utilities.FileUtility;
 import dev.thuan.rmi.server.RMIServer;
 import dev.thuan.utilities.screenCaptureCompressor.ScreenCapture;
 import dev.thuan.viewer.Recorder;
+import dev.thuan.viewer.draw.Overlay;
 
 /**
  * Server.java
@@ -41,7 +42,9 @@ public class Server extends Thread {
             new Hashtable<Integer, ViewerOptions>();
 
     private static final Hashtable<InetAddress, Queue<String>> messageQueues = new Hashtable<>();
+    private static final Hashtable<InetAddress, List<Map.Entry<Point, Point>>> drawOverlayPoints = new Hashtable<>();
 
+    private static final Hashtable<InetAddress, Overlay> overlays = new Hashtable<>();
     private int index = -1;
     private Recorder recorder;
 
@@ -255,6 +258,26 @@ public class Server extends Thread {
 
     public Server(Config viewerConfig) {
         client = new RMIClient(viewerConfig);
+    }
+
+    public static void setDrawOverlayPoint(List<Map.Entry<Point, Point>> points, InetAddress address) {
+        if (points == null) {
+            drawOverlayPoints.remove(address);
+            if (overlays.containsKey(address)) {
+                overlays.get(address).destroy();
+                overlays.remove(address);
+            }
+            return;
+        }
+        if (!drawOverlayPoints.containsKey(address)) {
+            drawOverlayPoints.put(address, points);
+            overlays.put(address, new Overlay(null, points));
+        } else {
+            System.out.println("setDrawOverlayPoint: " + address);
+            drawOverlayPoints.get(address).clear();
+            drawOverlayPoints.get(address).addAll(points);
+            overlays.get(address).updatePoints(points);
+        }
     }
 
     public boolean isConnected() {

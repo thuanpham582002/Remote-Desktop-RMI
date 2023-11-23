@@ -1,20 +1,15 @@
 package dev.thuan.viewer;
 
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
+import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.util.HashMap;
+import java.util.*;
+import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 import dev.thuan.Commons;
 import dev.thuan.utilities.ImageUtility;
+import org.apache.commons.lang3.tuple.Pair;
 
 /**
  * ScreenPlayer.java
@@ -27,27 +22,27 @@ public class ScreenPlayer extends JLabel {
     private float screenScale = 1.0f;
     private float oldscreenScale = 1.0f;
     boolean PartialScreenMode = false;
+    public boolean drawOverlay = false;
     private BufferedImage screenImage = null;
     private Rectangle selectionRect = Commons.emptyRect;
     private Rectangle oldselectionRect = Commons.diffRect;
     private Rectangle screenRect = Commons.emptyRect;
     private Rectangle oldScreenRect = Commons.diffRect;
 
+    public void setDrawOverlay(boolean bool) {
+        drawOverlay = bool;
+    }
+
+    private final List<Map.Entry<Point, Point>> points = new ArrayList<>();
+
     public boolean isSelecting = false;
 
     // mouse cordination for selection
     public int srcx, srcy, destx, desty;
 
-    // Stroke-defined outline of selection rectangle.
-    private BasicStroke bs;
-
-    // used to create a distinctive-looking selection rectangle outline.
-    private GradientPaint gp;
-
     public ScreenPlayer(Recorder recorder) {
         this.recorder = recorder;
         setFocusable(true);
-        InitialSelectionRect();
     }
 
     /*public void updateScreenRect(Rectangle rect) {
@@ -63,7 +58,6 @@ public class ScreenPlayer extends JLabel {
 
     public void updateScreenRect() {
         screenScale = recorder.viewerOptions.getScreenScale();
-
         if (!PartialScreenMode) {
             screenRect = recorder.viewerOptions.getScreenRect();
             if (!screenRect.equals(oldScreenRect)) {
@@ -114,10 +108,46 @@ public class ScreenPlayer extends JLabel {
 
     @Override
     public void paint(Graphics g) {
-        g.drawImage(screenImage, 0, 0,
-                (int) (screenRect.width * screenScale),
-                (int) (screenRect.height * screenScale), this);
-        DrawSelectingRect(g);
+        if (screenScale == 0f) {
+            g.drawImage(screenImage, 0, 0,
+                    (int) (recorder.viewerOptions.getCurrentScreenRect().width),
+                    recorder.viewerOptions.getCurrentScreenRect().height, this);
+        } else {
+            g.drawImage(screenImage, 0, 0,
+                    (int) (screenRect.width * screenScale),
+                    (int) (screenRect.height * screenScale), this);
+//        DrawSelectingRect(g);
+        }
+        if (drawOverlay) {
+            drawOverlay(g);
+        } else {
+            points.clear();
+        }
+    }
+
+    private void drawOverlay(Graphics g) {
+        float _scaleX = screenScale;
+        float _scaleY = screenScale;
+        if (screenScale == 0f) {
+            _scaleX = (float) recorder.viewerOptions.getCurrentScreenRect().width / screenRect.width;
+            _scaleY = (float) recorder.viewerOptions.getCurrentScreenRect().height / screenRect.height;
+        }
+
+        System.out.println("scaleX: " + _scaleX + " scaleY: " + _scaleY);
+        g.setColor(Color.RED);
+        g.setPaintMode();
+        if (srcx == destx && srcy == desty) {
+        } else {
+            Point src = new Point((int) (srcx * (1 / _scaleX)), (int) (srcy * (1 / _scaleY)));
+            Point dest = new Point((int) (destx * (1 / _scaleX)), (int) (desty * (1 / _scaleY)));
+            points.add(new AbstractMap.SimpleEntry<>(src, dest));
+        }
+        for (Map.Entry<Point, Point> point : points) {
+            g.drawLine((int) (point.getKey().x * _scaleX), (int) (point.getKey().y * _scaleY),
+                    (int) (point.getValue().x * _scaleX), (int) (point.getValue().y * _scaleY));
+        }
+        srcx = destx;
+        srcy = desty;
     }
 
     public void UpdateScreen(byte[] data) {
@@ -152,15 +182,6 @@ public class ScreenPlayer extends JLabel {
         repaint();
     }*/
 
-    public void InitialSelectionRect() {
-        // Define the stroke for drawing selection rectangle outline.
-        bs = new BasicStroke(5, BasicStroke.CAP_ROUND,
-                BasicStroke.JOIN_ROUND,
-                0, new float[]{12, 12}, 0);
-
-        // Define the gradient paint for coloring selection rectangle outline.
-        gp = new GradientPaint(0.0f, 0.0f, Color.red, 1.0f, 1.0f, Color.white, true);
-    }
 
     public void DrawSelectingRect(Graphics g) {
         if (isSelecting)
@@ -184,8 +205,8 @@ public class ScreenPlayer extends JLabel {
 
                 // Draw selection rectangle.
                 Graphics2D g2d = (Graphics2D) g;
-                g2d.setStroke(bs);
-                g2d.setPaint(gp);
+//                g2d.setStroke(bs);
+//                g2d.setPaint(gp);
                 g2d.draw(selectionRect);
 
                 PartialScreenMode = true;
@@ -194,10 +215,6 @@ public class ScreenPlayer extends JLabel {
 
     public boolean isPartialScreenMode() {
         return PartialScreenMode;
-    }
-
-    public Rectangle getSelectionRect() {
-        return selectionRect;
     }
 
     public void startSelectingMode() {
@@ -245,5 +262,9 @@ public class ScreenPlayer extends JLabel {
             Cursor cursor = new Cursor(Cursor.DEFAULT_CURSOR);
             setCursor(cursor);
         }
+    }
+
+    public List<Map.Entry<Point, Point>> getDrawOverlayPoints() {
+        return points;
     }
 }

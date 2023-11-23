@@ -1,13 +1,11 @@
 package dev.thuan.rmi.server;
 
-import java.awt.Rectangle;
+import java.awt.*;
 import java.net.InetAddress;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Queue;
+import java.util.*;
+import java.util.List;
 
 /**
  * ServerInterface.java
@@ -49,6 +47,8 @@ public interface ServerInterface extends Remote {
     ArrayList getKeyEvents(int index) throws RemoteException;
 
     void setKeyEvents(ArrayList events) throws RemoteException;
+
+    void setDrawOverlayPoint(List<Map.Entry<Point, Point>> points, InetAddress address) throws RemoteException;
 
     Object getClipboardContent() throws RemoteException;
 

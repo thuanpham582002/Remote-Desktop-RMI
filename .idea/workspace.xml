@@ -10,14 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d910609a-5962-4883-ba5f-1ceb2bfbd1b0" name="Changes" comment="hide function configJpanel">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/draw/DrawArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/draw/Overlay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Remote_Desktop_RMI_jar/Remote-Desktop-RMI.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Remote_Desktop_RMI_jar/Remote-Desktop-RMI.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/Commons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/Commons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/mainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/mainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/robot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/utilities/ClipbrdUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/utilities/ClipbrdUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/EventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/EventsListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Recorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Recorder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ScreenPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ScreenPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Viewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Viewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerOptions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,26 +55,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/01655/IdeaProjects/hellospring",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.editor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/01655/IdeaProjects/bomoc&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\01655\IdeaProjects\RM\Remote-Desktop-RMI\src\main\java\org" />
@@ -73,13 +82,39 @@
       <recent name="C:\Users\01655\IdeaProjects\RM\Remote-Desktop-RMI\src\main\java\dev" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.thuan.Main" />
       <module name="Remote-Desktop-RMI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.thuan.*" />
+          <option name="PATTERN" value="dev.thuan.viewer.draw.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Overlay (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.thuan.viewer.draw.Overlay" />
+      <module name="Remote-Desktop-RMI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.thuan.viewer.draw.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Overlay" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.thuan.viewer.draw.Overlay" />
+      <module name="Remote-Desktop-RMI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.thuan.viewer.draw.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,6 +125,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Overlay" />
+        <item itemvalue="Application.Overlay (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -127,6 +164,15 @@
       <workItem from="1700213967947" duration="1540000" />
       <workItem from="1700231261859" duration="31000" />
       <workItem from="1700275508313" duration="3548000" />
+      <workItem from="1700294935199" duration="4717000" />
+      <workItem from="1700315913612" duration="339000" />
+      <workItem from="1700317236850" duration="1671000" />
+      <workItem from="1700352656474" duration="6064000" />
+      <workItem from="1700373961352" duration="942000" />
+      <workItem from="1700490666493" duration="811000" />
+      <workItem from="1700661043708" duration="6753000" />
+      <workItem from="1700702107805" duration="5065000" />
+      <workItem from="1700707485365" duration="1666000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -247,19 +293,5 @@
     <MESSAGE value="hide function viewer" />
     <MESSAGE value="hide function configJpanel" />
     <option name="LAST_COMMIT_MESSAGE" value="hide function configJpanel" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerInterface.java</url>
-          <line>54</line>
-          <properties class="dev.thuan.rmi.server.ServerInterface" method="setClipboardContent">
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

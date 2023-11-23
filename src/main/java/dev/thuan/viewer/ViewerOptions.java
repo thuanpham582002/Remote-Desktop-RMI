@@ -29,11 +29,17 @@ public class ViewerOptions {
 
     private boolean clipboardTransfer = true;
 
+    private boolean drawOverlay = false;
+
     private Rectangle screenRect = Commons.emptyRect;
+
+    private Rectangle currentScreenRect = Commons.emptyRect;
 
     private Hashtable properties = new Hashtable();
 
     public ConnectionInfos connectionInfos;
+
+    public final static int TOOLBAR_HEIGHT = 50;
 
     public BufferedImage screenImage = null;
     public ScreenCapture capture = null;
@@ -222,5 +228,21 @@ public class ViewerOptions {
 
     public void setNewScreenRect() {
         screenRect = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
+    }
+
+    public Rectangle getCurrentScreenRect() {
+        return currentScreenRect;
+    }
+
+    public void setCurrentScreenRect(Rectangle currentScreenRect) {
+        this.currentScreenRect = currentScreenRect;
+    }
+
+    public boolean isDrawOverlay() {
+        return drawOverlay;
+    }
+
+    public void setDrawOverlay(boolean drawOverlay) {
+        this.drawOverlay = drawOverlay;
     }
 }
