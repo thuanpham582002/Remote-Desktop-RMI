@@ -183,6 +183,13 @@ public class Viewer extends Thread {
         }
     }
 
+    public void setScreenResolution(int index){
+        try {
+            client.rmiServer.setScreenResolution(index);
+        } catch (RemoteException re) {
+            re.printStackTrace();
+        }
+    }
     public void getHostProperties() {
         try {
             HostProperties.display(client.rmiServer.getHostProperties());

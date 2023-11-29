@@ -5,6 +5,7 @@ import dev.thuan.viewer.ConnectionDialog;
 import dev.thuan.viewer.Viewer;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * main.java
@@ -16,6 +17,14 @@ public class Main {
     public static int activeConnection = 0;
 
     public static void main(String[] args) {
+        GraphicsEnvironment g = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice[] devices = g.getScreenDevices();
+
+        for (int i = 0; i < devices.length; i++) {
+            System.out.println("Width:" + devices[i].getDisplayMode().getWidth());
+            System.out.println("Height:" + devices[i].getDisplayMode().getHeight());
+        }
+
         Commons.init();
 //        if (!analyseCMDArgs(args)) ;
         Settings.loadConfig();

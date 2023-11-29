@@ -22,6 +22,8 @@ public class SettingsJPanel extends javax.swing.JPanel {
         initComponents();
         jComboBoxLAF.setSelectedItem(Settings.lookAndFeel);
         jPanel2.setVisible(false);
+        jPanel1.setVisible(false);
+        jButtonClear.setVisible(false);
     }
 
     public static void setDownloadDir(String path) {

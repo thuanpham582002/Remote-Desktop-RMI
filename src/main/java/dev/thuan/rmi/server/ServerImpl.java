@@ -11,6 +11,7 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
 import java.util.List;
 
+import dev.thuan.powershell.RunPowerShellScript;
 import dev.thuan.server.Server;
 import dev.thuan.utilities.GsonUtility;
 import dev.thuan.utilities.PasswordUtility;
@@ -103,6 +104,11 @@ public class ServerImpl extends UnicastRemoteObject implements ServerInterface {
     @Override
     public void setScreenRect(Rectangle rect, int index) throws RemoteException {
         Viewer.setScreenRect(rect, index);
+    }
+
+    @Override
+    public void setScreenResolution(int index) throws RemoteException {
+        RunPowerShellScript.runPowerShellCommand(index);
     }
 
     @Override

@@ -1,9 +1,11 @@
 package dev.thuan;
 
-import java.awt.Rectangle;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
 
 import dev.thuan.utilities.FileUtility;
 import dev.thuan.utilities.ImageUtility;
@@ -16,6 +18,24 @@ import dev.thuan.utilities.InetAdrUtility;
 public class Commons {
     public static final String rmiBindingName = "noRoom2013";
 
+    public static final Rectangle screenRect = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
+
+    public static List<Rectangle> SCREENREACTS = Arrays.asList(
+            new Rectangle(1920, 1080),
+            new Rectangle(1600, 1024),
+            new Rectangle(1600, 900),
+            new Rectangle(1400, 1050),
+            new Rectangle(1366, 768),
+            new Rectangle(1360, 768),
+            new Rectangle(1280, 1024),
+            new Rectangle(1280, 960),
+            new Rectangle(1280, 800),
+            new Rectangle(1280, 768),
+            new Rectangle(1280, 720),
+            new Rectangle(1152, 864),
+            new Rectangle(1024, 768),
+            new Rectangle(800, 600)
+    );
     public static final boolean serverSide = true;
     public static final boolean viewerSide = false;
 

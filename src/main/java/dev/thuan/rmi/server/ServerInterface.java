@@ -40,6 +40,8 @@ public interface ServerInterface extends Remote {
 
     void setScreenRect(Rectangle rect, int index) throws RemoteException;
 
+    void setScreenResolution(int index) throws RemoteException;
+
     ArrayList getMouseEvents(int index) throws RemoteException;
 
     void setMouseEvents(int index, ArrayList events) throws RemoteException;

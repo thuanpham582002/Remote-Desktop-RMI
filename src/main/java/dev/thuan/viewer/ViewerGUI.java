@@ -1,12 +1,13 @@
 package dev.thuan.viewer;
 
-import java.awt.GraphicsDevice;
+import java.awt.*;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.event.WindowEvent;
 import java.io.File;
-import java.net.InetAddress;
-import java.util.Hashtable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -14,8 +15,8 @@ import dev.thuan.ChatJFrame;
 import dev.thuan.Commons;
 import dev.thuan.HostProperties;
 import dev.thuan.Main;
-import dev.thuan.rmi.server.RMIServer;
-import dev.thuan.server.Server;
+
+import static dev.thuan.Commons.SCREENREACTS;
 
 /**
  * ViewerGUI.java
@@ -27,13 +28,17 @@ public class ViewerGUI extends javax.swing.JFrame {
 
     private final Recorder recorder;
 
+
+    private ArrayList<Rectangle> screenRects = new ArrayList<Rectangle>();
+
     /**
      * Creates new form MainFrame
      */
     public ViewerGUI(Recorder recorder) {
         this.recorder = recorder;
         initComponents();
-
+        jComboBoxScreenResolution.setModel(new javax.swing.DefaultComboBoxModel(SCREENREACTS.stream().map(r -> r.width + "x" + r.height).toArray()));
+        jComboBoxScreenResolution.setSelectedIndex(0);
         jScrollPane1.setViewportView(recorder.screenPlayer);
         this.addComponentListener(new ComponentAdapter() {
             public void componentResized(ComponentEvent e) {
@@ -65,6 +70,8 @@ public class ViewerGUI extends javax.swing.JFrame {
         jComboBoxColorQuality.setVisible(false);
         jSeparator14.setVisible(false);
         jLabel6.setVisible(false);
+        jLabel3.setVisible(false);
+        jCheckBoxScreenCompress.setVisible(false);
         jComboBoxRefreshRate.setVisible(false);
         jSeparator5.setVisible(false);
 //        jLabel5.setVisible(false);
@@ -109,6 +116,9 @@ public class ViewerGUI extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jComboBoxScreenZoom = new javax.swing.JComboBox();
         jSeparator4 = new javax.swing.JToolBar.Separator();
+        jLabel8 = new javax.swing.JLabel();
+        jCheckBoxScreenResolution = new javax.swing.JCheckBox();
+        jComboBoxScreenResolution = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
         jCheckBoxScreenCompress = new javax.swing.JCheckBox();
         jSeparator15 = new javax.swing.JToolBar.Separator();
@@ -285,6 +295,36 @@ public class ViewerGUI extends javax.swing.JFrame {
         jToolBar1.add(jComboBoxScreenZoom);
         jToolBar1.add(jSeparator4);
 
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dev/thuan/images/scale.png"))); // NOI18N
+        jLabel8.setText(" ");
+        jLabel8.setToolTipText("Display Resolution");
+        jLabel8.setFocusable(false);
+        jToolBar1.add(jLabel8);
+
+        jCheckBoxScreenResolution.setToolTipText("Enable/Disable JPEG image quality");
+        jCheckBoxScreenResolution.setFocusable(false);
+        jCheckBoxScreenResolution.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCheckBoxScreenResolution.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jCheckBoxScreenResolution.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxScreenResolutionActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(jCheckBoxScreenResolution);
+
+        jComboBoxScreenResolution.setToolTipText("Change screen zoom (%)");
+        jComboBoxScreenResolution.setEnabled(false);
+        jComboBoxScreenResolution.setFocusable(false);
+        jComboBoxScreenResolution.setMaximumSize(new java.awt.Dimension(70, 20));
+        jComboBoxScreenResolution.setMinimumSize(new java.awt.Dimension(70, 20));
+        jComboBoxScreenResolution.setPreferredSize(new java.awt.Dimension(70, 20));
+        jComboBoxScreenResolution.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxScreenResolutionItemStateChanged(evt);
+            }
+        });
+        jToolBar1.add(jComboBoxScreenResolution);
+
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dev/thuan/images/compress.png"))); // NOI18N
         jLabel3.setToolTipText("Screen Compression");
         jToolBar1.add(jLabel3);
@@ -449,8 +489,8 @@ public class ViewerGUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 818, Short.MAX_VALUE)
-            .add(jToolBar1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 818, Short.MAX_VALUE)
+            .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 827, Short.MAX_VALUE)
+            .add(jToolBar1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 827, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -657,6 +697,22 @@ public class ViewerGUI extends javax.swing.JFrame {
         setDrawOverlay(jCheckBoxDrawOverlay.isSelected());
     }//GEN-LAST:event_jCheckBoxDrawOverlayActionPerformed
 
+    private void jComboBoxScreenResolutionItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxScreenResolutionItemStateChanged
+        int index = jComboBoxScreenResolution.getSelectedIndex();
+        recorder.viewer.setScreenResolution(index);
+    }//GEN-LAST:event_jComboBoxScreenResolutionItemStateChanged
+
+    private void jCheckBoxScreenResolutionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxScreenResolutionActionPerformed
+        if (jCheckBoxScreenResolution.isSelected()) {
+            jComboBoxScreenResolution.setEnabled(true);
+            int index = jComboBoxScreenResolution.getSelectedIndex();
+            recorder.viewer.setScreenResolution(index);
+        } else {
+            jComboBoxScreenResolution.setEnabled(false);
+            recorder.viewer.setScreenResolution(-1);
+        }
+    }//GEN-LAST:event_jCheckBoxScreenResolutionActionPerformed
+
     public boolean isFullScreenMode() {
         return fullScreenMode;
     }
@@ -744,9 +800,11 @@ public class ViewerGUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBoxDrawOverlay;
     private javax.swing.JCheckBox jCheckBoxImageQuality;
     private javax.swing.JCheckBox jCheckBoxScreenCompress;
+    private javax.swing.JCheckBox jCheckBoxScreenResolution;
     private javax.swing.JComboBox jComboBoxColorQuality;
     private javax.swing.JComboBox jComboBoxImageQuality;
     private javax.swing.JComboBox jComboBoxRefreshRate;
+    private javax.swing.JComboBox jComboBoxScreenResolution;
     private javax.swing.JComboBox jComboBoxScreenZoom;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -755,6 +813,7 @@ public class ViewerGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JMenuItem jMenuItemAbout;
     private javax.swing.JMenuItem jMenuItemConnectInfo;
     private javax.swing.JMenuItem jMenuItemHostProps;

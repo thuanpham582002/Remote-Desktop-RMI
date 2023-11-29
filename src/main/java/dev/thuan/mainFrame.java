@@ -53,14 +53,10 @@ public class mainFrame extends javax.swing.JFrame {
         hjp = new HomeJPanel();
         cjp = new ConfigJPanel();
         acjp = new ActiveConnectionsJPanel();
-        sjp = new SettingsJPanel();
-        ajp = new AboutJPanel();
 
         jTabbedPane.addTab("Home", new javax.swing.ImageIcon(getClass().getResource("/dev/thuan/images/gohome.png")), hjp);
         jTabbedPane.addTab("Config", new javax.swing.ImageIcon(getClass().getResource("/dev/thuan/images/configure.png")), cjp);
         jTabbedPane.addTab("Connections", new javax.swing.ImageIcon(getClass().getResource("/dev/thuan/images/connect_established.png")), acjp);
-        jTabbedPane.addTab("Settings", new javax.swing.ImageIcon(getClass().getResource("/dev/thuan/images/settings.png")), sjp);
-//        jTabbedPane.addTab("About", new javax.swing.ImageIcon(getClass().getResource("/dev/thuan/images/about.png")), ajp);
 
         jTabbedPane.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {

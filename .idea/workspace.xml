@@ -10,11 +10,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d910609a-5962-4883-ba5f-1ceb2bfbd1b0" name="Changes" comment="add overlay draw function">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/PowerShellRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/RunPowerShellScript.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/command_1024x768.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/command_1152x864.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/command_1280x1024.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/command_1280x720.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/command_1280x768.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/command_1280x800.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/command_1280x960.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/command_1360x768.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/command_1366x768.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/command_1400x1050.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/command_1600x1024.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/command_1600x900.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/command_1920x1080.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/powershell/command_800x600.ps1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Remote_Desktop_RMI_jar/Remote-Desktop-RMI.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Remote_Desktop_RMI_jar/Remote-Desktop-RMI.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ScreenPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ScreenPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/draw/Overlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/draw/Overlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/Commons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/Commons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/SettingsJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/SettingsJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/mainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/mainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/rmi/server/ServerInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/utilities/FileUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/utilities/FileUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Viewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/Viewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +74,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/01655/IdeaProjects/bomoc&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/01655/IdeaProjects/RM/Remote-Desktop-RMI/src/main/java/dev/thuan/powershell&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -65,12 +89,26 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\01655\IdeaProjects\RM\Remote-Desktop-RMI\src\main\java\dev\thuan\powershell" />
       <recent name="C:\Users\01655\IdeaProjects\RM\Remote-Desktop-RMI\src\main\java\org" />
       <recent name="C:\Users\01655\IdeaProjects\RM\Remote-Desktop-RMI\src\main\java" />
       <recent name="C:\Users\01655\IdeaProjects\RM\Remote-Desktop-RMI\src\main\java\dev" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration name="ChangeResolution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.thuan.viewer.draw.ChangeResolution" />
+      <module name="Remote-Desktop-RMI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.thuan.viewer.draw.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.thuan.Main" />
       <module name="Remote-Desktop-RMI" />
@@ -84,12 +122,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Overlay (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dev.thuan.viewer.draw.Overlay" />
+    <configuration name="PowerShellRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.thuan.powershell.PowerShellRunner" />
       <module name="Remote-Desktop-RMI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.thuan.viewer.draw.*" />
+          <option name="PATTERN" value="dev.thuan.powershell.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,12 +135,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Overlay" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dev.thuan.viewer.draw.Overlay" />
+    <configuration name="RunPowerShellScript" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.thuan.powershell.RunPowerShellScript" />
       <module name="Remote-Desktop-RMI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.thuan.viewer.draw.*" />
+          <option name="PATTERN" value="dev.thuan.powershell.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScreenResolution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.thuan.ScreenResolution" />
+      <module name="Remote-Desktop-RMI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.thuan.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,8 +164,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Overlay" />
-        <item itemvalue="Application.Overlay (1)" />
+        <item itemvalue="Application.RunPowerShellScript" />
+        <item itemvalue="Application.ScreenResolution" />
+        <item itemvalue="Application.PowerShellRunner" />
+        <item itemvalue="Application.ChangeResolution" />
       </list>
     </recent_temporary>
   </component>
@@ -162,7 +215,17 @@
       <workItem from="1700702107805" duration="5065000" />
       <workItem from="1700707485365" duration="2591000" />
       <workItem from="1700745799884" duration="2174000" />
-      <workItem from="1700748091018" duration="2536000" />
+      <workItem from="1700748091018" duration="3352000" />
+      <workItem from="1700782812805" duration="1205000" />
+      <workItem from="1700790354622" duration="3264000" />
+      <workItem from="1700795780613" duration="3418000" />
+      <workItem from="1700810274128" duration="2798000" />
+      <workItem from="1700814783603" duration="97000" />
+      <workItem from="1701179561634" duration="3731000" />
+      <workItem from="1701183318790" duration="1167000" />
+      <workItem from="1701188433681" duration="600000" />
+      <workItem from="1701213579967" duration="1206000" />
+      <workItem from="1701244066675" duration="3379000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -252,7 +315,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700709417725</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add overlay draw function">
+      <option name="closed" value="true" />
+      <created>1700752106022</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700752106022</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,5 +363,20 @@
     <MESSAGE value="hide function configJpanel" />
     <MESSAGE value="add overlay draw function" />
     <option name="LAST_COMMIT_MESSAGE" value="add overlay draw function" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/thuan/viewer/ViewerOptions.java</url>
+          <line>88</line>
+          <properties class="dev.thuan.viewer.ViewerOptions" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

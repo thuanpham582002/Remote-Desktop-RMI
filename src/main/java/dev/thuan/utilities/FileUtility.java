@@ -116,8 +116,6 @@ public class FileUtility {
         return fs.toArray(new File[fs.size()]);
     }
 
-    // delect noRoom2013.conf, server*.conf
-    //    viewer*.conf, truststore & keystore files
     public static String[] getConfigFiles() {
         final String noRoom2013_config = new File(Settings.configFile).getName();
         final String trust_store = new File(Settings.trustStore).getName();
